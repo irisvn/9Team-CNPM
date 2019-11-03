@@ -1,0 +1,234 @@
+/* clearfix */
+.astra-advanced-hook-7790 {
+    background-color: #f0f0f0;
+}
+.ast-row {
+	margin: 0px;
+}
+.SlidePromotion {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 1;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page, .owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+/* lt-promotion */
+.SlidePromotion .col-sm-8 .owl-carousel {
+    max-height: 300px;
+    border: solid 1px #eee;
+    border-bottom: none;
+}
+.owl-controls {
+	display: none !important;
+}
+.promotion-nav ul {
+    list-style: none;
+    margin: 0;
+}
+.promotion-nav ul li {
+    display: block;
+    float: left;
+}
+.promotion-nav ul li a, .promotion-nav ul li a:focus, 
+.promotion-nav ul li a:visited, .promotion-nav ul li a:active {
+	text-align: center;
+	border: solid 1px #eee;
+	border-right: none;		
+	display: block;
+	color: #000;
+	padding: 10px;
+	position: relative;	
+	text-decoration: none;
+	min-height: 55px;
+	background: #fff;
+}
+.promotion-nav ul li:last-child a {
+	border-right: solid 1px #eee;
+}
+.small-banner .col-sm-12:last-child {
+    margin-top: 5px;
+}
+.promotion-nav ul li a span {
+	display: none;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	top: -20px;
+	color: #f68c20;
+	text-align: center;
+	left: 0px;
+}
+.promotion-nav ul li a:hover, .promotion-nav ul li a.active {
+	background: #f68c20;
+	color: #fff;
+	border: solid 1px #f68c20 !important;
+	text-decoration: none;
+}
+.promotion-nav ul li a.active span {
+	display: block;
+}
+.promotion-nav ul font.fa-2x{
+	font-size: 3em;
+} 
+.promotion-nav ul li a {
+	font-size: 12px;
+	line-height: 18px;
+	height: 55px;
+}
+.right-small {
+	padding: 0;
+    max-width: 385px;
+    float: right;
+    margin-bottom: 5px;
+}
+.right-small img {
+	width: 385px;
+    max-height: 175px;
+}
+
+
+/*Custom Product Page*/
+
+@media (min-width: 993px) {
+	.ast-right-sidebar #secondary {
+	    padding-left: 10px;
+	}
+}
+#secondary li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.woocommerce div.product .product_title {
+    font-size: 23px;
+    font-weight: bold;
+}
+.entry-summary span.woocommerce-Price-amount.amount {
+    font-size: 23px;
+}
+span.woocommerce-Price-amount.amount {
+    color: red;
+}
+.woocommerce-product-details__short-description ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Form Nhập sdt */
+form#form-sdt-iris {
+    margin: 10px 0 10px 0;
+}
+.input-iris {
+    position: relative;
+    display: block;
+    border-collapse: separate;
+}
+input#txtPhone {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 60%;
+    margin-bottom: 0;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+span.iris-button {
+    font-size: 0;
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+button#CallMeNow {
+    display: inline-block;
+    z-index: 2;
+    margin: 0 0 0 -2px;
+    position: relative;
+    color: #fff;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    background-color: #e31f31;
+    width: 100%;
+    padding: 0;
+    height: 43px;
+}
+.dtv-success-note {
+    display: none;
+    color: #e11b1e;
+}
+.border-dotted-green {
+    border: 3px dashed #3e8f3e;
+    padding: 20px;
+}
+.border-dotted-green > p {
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0 0 10px;
+}

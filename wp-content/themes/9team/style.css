@@ -1,0 +1,214 @@
+/**
+Theme Name: 9Team
+Author: 9Team - HCMUT
+Author URI: https://9team.codedao.dev/
+Description: Dự án phục vụ môn học: \"Thực tập công nghệ phần mềm\"
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 9team
+Template: astra
+*/
+
+.row {
+    margin: 0px;
+}
+
+.SlidePromotion {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+/* display none until init */
+
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 1;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* mouse grab icon */
+
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+
+/* fix */
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+
+/* lt-promotion */
+
+.SlidePromotion .col-sm-8 .owl-carousel {
+    max-height: 300px;
+    border: solid 1px #eee;
+    border-bottom: none;
+}
+
+.owl-item.loading {
+    min-height: 200px;
+    background: url(https://dienthoaivui.com.vn/wp-content/plugins/a3-lazy-load/assets/css/loading.gif) no-repeat center center;
+}
+
+.owl-controls {
+    display: none !important;
+}
+
+.promotion-nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+.promotion-nav ul li {
+    display: block;
+    float: left;
+}
+
+.promotion-nav ul li a,
+.promotion-nav ul li a:focus,
+.promotion-nav ul li a:visited,
+.promotion-nav ul li a:active {
+    text-align: center;
+    border: solid 1px #eee;
+    border-right: none;
+    display: block;
+    color: #000;
+    padding: 10px 5px;
+    position: relative;
+    text-decoration: none;
+    min-height: 55px;
+    background: #fff;
+}
+
+.promotion-nav ul li:lchild a {
+    border-right: solid 1px #eee;
+}
+
+.small-banner .col-sm-12:lchild {
+    margin-top: 5px;
+}
+
+.promotion-nav ul li a span {
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: -25px;
+    color: #e41e31;
+    text-align: center;
+    left: 0px;
+}
+
+.promotion-nav ul li a:hover,
+.promotion-nav ul li a.active {
+    background: #e41e31;
+    color: #fff;
+    border: solid 1px #e41e31 !important;
+    text-decoration: none;
+}
+
+.promotion-nav ul li a.active span {
+    display: block;
+}
+
+.promotion-nav ul font.fa-2x {
+    font-size: 3em;
+}
+
+.promotion-nav ul li a {
+    font-size: 12px;
+    line-height: 18px;
+    height: 55px;
+}
+
+.right-small {
+    padding: 0;
+    max-width: 385px;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.right-small img {
+    width: 385px;
+    max-height: 175px;
+}
+
+@media (max-width: 768px) {
+    .col-sm-12 .small-banner {
+        padding: 10px 0 5px 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .small-banner {
+        padding-left: 5px;
+    }
+    .right-small img {
+        max-height: 153px;
+    }
+}

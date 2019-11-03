@@ -1,0 +1,175 @@
+@media (max-width: 768px) {
+    /* Small banner home */
+    .small-banner .col-xs-6 {
+        margin: 0 !important;
+    }
+    .SlidePromotion .col-xs-12 {
+        padding: 0;
+    }
+    .promotion-nav.ast-row {
+        display: none;
+    }
+    .owl-controls {
+        display: block !important;
+    }
+    .owl-pagination {
+        text-align: center;
+    }
+    .owl-page {
+        display: inline-block;
+        zoom: 1;
+    }
+    .owl-page span {
+        border: solid 1px #000;
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 0 5px;
+        border-radius: 20px;
+        background: #000;
+        opacity: 0.5;
+        z-index: 10;
+    }
+    .owl-page.active span {
+        background: #e11b1e;
+        border: none;
+        opacity: 1;
+    }
+    /* Dịch vụ nổi bật */
+
+    #iris_menu-hot {
+        border-bottom: 2px solid #E31F31;
+        margin-bottom: -12px;
+        display: block;
+    }
+    #iris_menu-hot h3.iris_tieude {
+        font-size: 13px;
+        margin: 0;
+        line-height: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        width: auto;
+    }
+    #iris_menu-hot h3.iris_tieude span {
+        background: #E31F31;
+        padding: 10px 10px 8px 15px;
+        color: white;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
+    #iris_menu-hot h3.iris_tieude :after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 40px solid transparent;
+        border-left: 20px solid #E31F31;
+        border-bottom: 0px solid transparent;
+        border-right: 0 solid transparent;
+        position: absolute;
+        top: 0px;
+        right: -20px;
+    }
+    .iris_sub-cat {
+        display: inline-block;
+        margin: 0;
+        line-height: 40px;
+        margin-left: 0px;
+        float: right;
+    }
+    .iris_sub-cat > a {
+        padding: 8px;
+        text-decoration: none;
+        color: #e82424;
+        font-size: 14px;
+    }
+    .dich_vu_noi_bat_home {
+        display: block;
+        overflow: hidden;
+        padding: 10px 0 0;
+        width: 100%;
+        background: #fff;
+        margin: 0;
+        color: #333;
+    }
+    .dich_vu_noi_bat_home a {
+        float: left;
+        overflow: hidden;
+        width: 25%;
+        text-align: center;
+        height: 90px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+    .dich_vu_noi_bat_home div {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background: #f3f3f3;
+        border-radius: 30px;
+    }
+    .dich_vu_noi_bat_home h3 {
+        display: block;
+        overflow: hidden;
+        line-height: 1.3em;
+        font-size: 12px !important;
+        font: 14px/18px Arial,Helvetica,sans-serif;
+        color: #333;
+        padding: 5px 0;
+        outline: none;
+        margin: 0;
+    }
+
+    [class^="iconmobile-"], [class*="iconmobile-"] {
+        background-image: url(https://dienthoaivui.com.vn/wp-content/uploads/2018/01/icon-hot-dtv-2.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+        vertical-align: middle;
+        background-size: 307px 44px;
+    }
+
+    .iconmobile-thaykinh {
+        background-position: 5px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thaypin {
+        background-position: -26px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thayvo {
+        background-position: -212px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-dovo {
+        background-position: -238px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thaycamsau {
+        background-position: -157px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thaycamtruoc {
+        background-position: -95px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thaymanhinh {
+        background-position: -183px -5px;
+        margin-top: 11px;
+    }
+    .iconmobile-thaykinhcamung {
+        background-position: -124px -5px;
+        margin-top: 11px;
+    }
+
+    /* Không nhớ */
+    .ast-plain-container #primary {
+        margin-top: 0px;
+        padding: 0px;
+    }
+}
