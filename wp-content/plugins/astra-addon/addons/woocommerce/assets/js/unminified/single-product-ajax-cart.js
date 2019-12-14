@@ -107,7 +107,11 @@
 					$( document.body ).trigger( 'wc_fragment_refresh' );
 					$( document.body ).trigger( 'added_to_cart', [ results.fragments, results.cart_hash, $thisbutton ] );
 
-					// Redirect to cart option
+					if ( typeof wc_add_to_cart_params === 'undefined' ) {
+						return;
+					}
+
+					// Redirect to cart option.
 					if ( wc_add_to_cart_params.cart_redirect_after_add === 'yes' ) {
 						window.location = wc_add_to_cart_params.cart_url;
 						return;

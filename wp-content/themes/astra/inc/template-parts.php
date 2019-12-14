@@ -282,7 +282,7 @@ if ( ! function_exists( 'astra_entry_content_blog_template' ) ) {
 	 * @since 1.0.0
 	 */
 	function astra_entry_content_blog_template() {
-		get_template_part( 'template-parts/blog/blog-layout' );
+		get_template_part( 'template-parts/blog/blog-layout', apply_filters( 'astra_blog_template_name', '' ) );
 	}
 }
 

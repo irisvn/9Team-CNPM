@@ -23,17 +23,30 @@ if ( $show_breadcrumb ) {
 		<div class="ast-container ast-title-bar-align-center">
 			<div class="ast-advanced-headers-wrap">
 				<?php do_action( 'astra_advanced_header_layout_2_wrap_top' ); ?>
-				<?php if ( $title ) { ?>
-				<h1 class="ast-advanced-headers-title">
-					<?php do_action( 'astra_advanced_header_layout_2_before_title' ); ?>
-					<?php echo apply_filters( 'astra_advanced_header_layout_2_title', wp_kses_post( $title ) ); ?>
-					<?php do_action( 'astra_advanced_header_layout_2_after_title' ); ?>
-				</h1>
-				<?php } ?>
-
-				<?php do_action( 'astra_advanced_header_layout_2_after_title_tag' ); ?>
-
-				<?php if ( $description ) { ?>
+				<?php
+				if ( $title ) {
+					echo sprintf(
+						'<%1$s class="ast-advanced-headers-title">
+							%2$s
+							%3$s
+							%4$s
+						</%1$s>',
+						/**
+						 * Filters the tags for Advanced Header Title - Lyaout 2.
+						 *
+						 * @since 2.1.3
+						 *
+						 * @param string $tags string containing the HTML tags for Advanced Header title.
+						 */
+						apply_filters( 'astra_advanced_header_layout_2_title_tag', 'h1' ),
+						do_action( 'astra_advanced_header_layout_2_before_title' ),
+						apply_filters( 'astra_advanced_header_layout_2_title', wp_kses_post( $title ) ),
+						do_action( 'astra_advanced_header_layout_2_after_title' )
+					);
+				}
+				do_action( 'astra_advanced_header_layout_2_after_title_tag' );
+				if ( $description ) {
+					?>
 				<div class="taxonomy-description">
 					<?php do_action( 'astra_advanced_header_layout_2_before_description' ); ?>
 					<?php echo apply_filters( 'astra_advanced_header_layout_2_description', wp_kses_post( $description ) ); ?>

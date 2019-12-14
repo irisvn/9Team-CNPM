@@ -58,7 +58,7 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Customizer_Partials' ) ) {
 			if ( '' !== $header_logo ) {
 				$custom_logo_id = attachment_url_to_postid( $header_logo );
 				$html           = sprintf(
-					'<a href="%1$s" class="sticky-custom-logo-link" rel="home" itemprop="url">%2$s</a>',
+					'<a href="%1$s" class="sticky-custom-logo-link" rel="home" %3$s>%2$s</a>',
 					esc_url( home_url( '/' ) ),
 					wp_get_attachment_image(
 						$custom_logo_id,
@@ -66,6 +66,12 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Customizer_Partials' ) ) {
 						false,
 						array(
 							'class' => 'custom-logo',
+						)
+					),
+					astra_attr(
+						'site-title-sticky-custom-link',
+						array(
+							'class' => '',
 						)
 					)
 				);

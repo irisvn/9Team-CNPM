@@ -61,7 +61,6 @@ if ( ! class_exists( 'Astra_Theme_Update' ) ) {
 			} else {
 				add_action( 'wp', __CLASS__ . '::init', 5 );
 			}
-
 			add_action( 'init', __CLASS__ . '::astra_pro_compatibility' );
 		}
 
@@ -77,12 +76,9 @@ if ( ! class_exists( 'Astra_Theme_Update' ) ) {
 			// Get auto saved version number.
 			$saved_version = astra_get_option( 'theme-auto-version', false );
 
+			// If there is no saved version in the database then return.
 			if ( false === $saved_version ) {
-
-				$saved_version = ASTRA_THEME_VERSION;
-
-				// Update auto saved version number.
-				astra_update_option( 'theme-auto-version', ASTRA_THEME_VERSION );
+				return;
 			}
 
 			// If equals then return.
@@ -198,33 +194,9 @@ if ( ! class_exists( 'Astra_Theme_Update' ) ) {
 			if ( version_compare( $saved_version, '1.6.1-alpha.3', '<' ) ) {
 				self::v_1_6_1();
 			}
-
 			if ( version_compare( $saved_version, '2.0.0', '<' ) ) {
 				self::v_2_0_0();
 			}
-
-			// Not have stored?
-			if ( empty( $saved_version ) ) {
-
-				// Get old version.
-				$theme_version = get_option( '_astra_auto_version', ASTRA_THEME_VERSION );
-
-				// Remove option.
-				delete_option( '_astra_auto_version' );
-
-			} else {
-
-				// Get latest version.
-				$theme_version = ASTRA_THEME_VERSION;
-			}
-
-			// Update auto saved version number.
-			astra_update_option( 'theme-auto-version', $theme_version );
-
-			// Update variables.
-			Astra_Theme_Options::refresh();
-
-			do_action( 'astra_update_after' );
 		}
 
 		/**
@@ -1006,7 +978,6 @@ if ( ! class_exists( 'Astra_Theme_Update' ) ) {
 		public static function v_2_0_0() {
 			update_site_option( 'bsf_force_check_extensions', true );
 		}
-
 	}
 }
 

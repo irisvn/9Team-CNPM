@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Astra Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astra Pro 2.1.2\n"
+"Project-Id-Version: Astra Pro 2.1.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astra-addon\n"
-"POT-Creation-Date: 2019-10-16 06:58:35+00:00\n"
+"POT-Creation-Date: 2019-11-12 09:53:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -771,7 +771,7 @@ msgstr ""
 #: addons/advanced-headers/classes/astra-breadcrumbs.php:187
 #: addons/advanced-headers/classes/astra-breadcrumbs.php:196
 #: addons/advanced-headers/classes/astra-breadcrumbs.php:208
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:577
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:561
 #: addons/nav-menu/classes/class-astra-ext-nav-widget-support.php:215
 msgid "Edit"
 msgstr ""
@@ -882,12 +882,12 @@ msgstr ""
 msgid "Add Custom HTML"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:566
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:572
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:139
 msgid "No Page Headers Found"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:575
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:581
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:397
 msgid "Page Header"
 msgstr ""
@@ -986,7 +986,7 @@ msgid "Size "
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:679
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:612
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:596
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:188
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:275
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:362
@@ -1163,7 +1163,7 @@ msgstr ""
 #: addons/header-sections/classes/sections/class-astra-below-header-colors-bg-configs.php:209
 #: addons/header-sections/classes/sections/class-astra-below-header-colors-bg-configs.php:246
 #: addons/header-sections/classes/sections/class-astra-below-header-colors-bg-configs.php:284
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:552
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:536
 #: addons/scroll-to-top/classes/sections/class-astra-scroll-to-top-configs.php:153
 #: addons/scroll-to-top/classes/sections/class-astra-scroll-to-top-configs.php:187
 #: addons/sticky-header/classes/sections/class-astra-sticky-above-header-colors-bg-configs.php:52
@@ -1222,7 +1222,7 @@ msgstr ""
 #: addons/header-sections/classes/sections/class-astra-above-header-configs.php:459
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:292
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:406
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:712
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:696
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-checkout-configs.php:126
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-general-configs.php:54
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-general-configs.php:130
@@ -1238,14 +1238,14 @@ msgstr ""
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1105
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:223
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:237
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:517
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:529
 msgid "Customizer Setting"
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1082
 #: addons/header-sections/classes/sections/class-astra-above-header-configs.php:45
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:44
-#: classes/astra-common-functions.php:301
+#: classes/astra-common-functions.php:305
 msgid "Search"
 msgstr ""
 
@@ -1258,7 +1258,7 @@ msgstr ""
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1084
 #: addons/header-sections/classes/sections/class-astra-above-header-configs.php:47
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:46
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:715
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:699
 msgid "Widget"
 msgstr ""
 
@@ -1574,7 +1574,7 @@ msgstr ""
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:594
 #: addons/learndash/classes/sections/class-astra-customizer-learndash-color-configs.php:75
 #: addons/learndash/classes/sections/class-astra-customizer-learndash-typo-configs.php:81
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:473
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:457
 #: addons/sticky-header/classes/sections/class-astra-sticky-header-configs.php:105
 #: addons/sticky-header/classes/sections/class-astra-sticky-header-configs.php:245
 #: addons/typography/classes/sections/class-astra-footer-typo-configs.php:63
@@ -2525,7 +2525,7 @@ msgstr ""
 #: addons/blog-pro/classes/sections/class-astra-customizer-blog-pro-image-resizer-configs.php:96
 #: addons/blog-pro/classes/sections/class-astra-customizer-blog-pro-image-resizer-configs.php:146
 #: addons/blog-pro/classes/sections/class-astra-customizer-blog-pro-image-resizer-configs.php:168
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:618
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:602
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:197
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:284
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:371
@@ -3130,7 +3130,7 @@ msgstr ""
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:66
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:225
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:239
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:519
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:531
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-shop-configs.php:456
 msgid "Disabled"
 msgstr ""
@@ -3246,7 +3246,7 @@ msgstr ""
 
 #: addons/header-sections/classes/sections/class-astra-above-header-configs.php:677
 #: addons/header-sections/classes/sections/class-astra-below-header-configs.php:737
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:520
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:504
 msgid "Menu Label"
 msgstr ""
 
@@ -3328,19 +3328,19 @@ msgid "Course / Lesson"
 msgstr ""
 
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:148
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:546
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:558
 #: addons/sticky-header/classes/sections/class-astra-sticky-header-configs.php:274
 msgid "Stick Primary Header"
 msgstr ""
 
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:161
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:532
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:544
 #: addons/sticky-header/classes/sections/class-astra-sticky-header-sections-configs.php:45
 msgid "Stick Above Header"
 msgstr ""
 
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:174
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:559
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:571
 #: addons/sticky-header/classes/sections/class-astra-sticky-header-sections-configs.php:56
 msgid "Stick Below Header"
 msgstr ""
@@ -3355,7 +3355,7 @@ msgstr ""
 
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:224
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:238
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:518
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:530
 msgid "Enabled"
 msgstr ""
 
@@ -3500,264 +3500,264 @@ msgstr ""
 msgid "Saved"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:129
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:123
 #. translators: Astra Pro whitelabbeled string
 msgid "%1$s Menu Settings"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:437
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:421
 #. translators: Astra Pro whitelabbeled string
 msgid "%1$s Menu Options"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:445
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:429
 msgid "Editing"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:450
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:434
 msgid "Mega Menu"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:458
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:442
 msgid "Enable Mega Menu"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:467
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:451
 msgid "Mega Menu width"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:476
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:460
 msgid "Menu Container Width"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:479
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:463
 msgid "Full"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:487
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:471
 msgid "Change Heading Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:492
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:476
 msgid "Click Here!"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:500
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:484
 msgid "Make this menu as column heading?"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:510
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:494
 msgid "Column Heading Separator Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:526
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:510
 msgid "Hide Menu Label/Description?"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:538
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:522
 msgid "Disable Link"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:548
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:532
 msgid "Background Color / Image"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:563
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:547
 msgid "Background image"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:578
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:562
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:150
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:237
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:324
 msgid "Remove"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:579
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:563
 msgid "Upload Image"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:587
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:571
 msgid "Background Repeat"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:593
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:577
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:164
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:251
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:338
 msgid "No Repeat"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:594
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:578
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:165
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:252
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:339
 msgid "Repeat All"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:595
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:579
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:166
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:253
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:340
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:596
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:580
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:167
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:254
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:341
 msgid "Repeat Vertically"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:619
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:603
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:191
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:278
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:365
 msgid "Cover"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:620
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:604
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:194
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:281
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:368
 msgid "Contain"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:640
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:624
 msgid "Background Position"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:646
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:630
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:174
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:261
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:348
 msgid "Left Top"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:647
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:631
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:175
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:262
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:349
 msgid "Left Center"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:648
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:632
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:176
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:263
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:350
 msgid "Left Bottom"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:649
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:633
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:177
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:264
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:351
 msgid "Right Top"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:650
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:634
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:178
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:265
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:352
 msgid "Right Center"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:651
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:635
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:179
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:266
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:353
 msgid "Right Bottom"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:652
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:636
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:180
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:267
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:354
 msgid "Center Top"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:653
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:637
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:181
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:268
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:355
 msgid "Center Center"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:654
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:638
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:182
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:269
 #: classes/customizer/controls/responsive-background/class-astra-control-responsive-background.php:356
 msgid "Center Bottom"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:668
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:652
 msgid "Override Colors for this mega menu?"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:672
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:656
 msgid "Text/Link Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:682
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:666
 msgid "Text/Link Hover Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:692
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:676
 msgid "Column Divider Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:701
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:705
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:685
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:689
 msgid "Content Source"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:713
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:697
 msgid "Custom Text"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:714
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:746
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:698
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:730
 msgid "Template"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:736
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:720
 msgid "Enter Custom Text"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:769
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:753
 msgid "Insert Widget"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:781
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:765
 msgid "Select widget"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:792
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:776
 msgid "Add Widget"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:802
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:786
 msgid "Highlight Labels"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:806
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:790
 msgid "Menu Highlight label"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:816
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:800
 msgid "Highlight Label Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:826
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:810
 msgid "Highlight Label Background Color"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:838
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:822
 #: addons/nav-menu/classes/class-astra-ext-nav-widget-support.php:275
 msgid "Save"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:839
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-markup.php:823
 msgid "Cancel"
 msgstr ""
 
@@ -3900,7 +3900,7 @@ msgstr ""
 msgid "Site Identity Space"
 msgstr ""
 
-#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:514
+#: addons/sticky-header/classes/class-astra-ext-sticky-header-markup.php:526
 #: addons/sticky-header/classes/class-astra-sticky-header-panels-configs.php:39
 msgid "Sticky Header"
 msgstr ""
@@ -4036,8 +4036,8 @@ msgstr ""
 msgid "Sale!"
 msgstr ""
 
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1284
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1304
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1290
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1310
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-shop-configs.php:452
 #. translators: 1: Cart Title Markup, 2: Cart Icon Markup
 msgid "Quick View"
@@ -4772,12 +4772,12 @@ msgctxt "advanced-hooks singular name"
 msgid "Custom Layout"
 msgstr ""
 
-#: classes/astra-common-functions.php:298
+#: classes/astra-common-functions.php:302
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: classes/astra-common-functions.php:299
+#: classes/astra-common-functions.php:303
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""

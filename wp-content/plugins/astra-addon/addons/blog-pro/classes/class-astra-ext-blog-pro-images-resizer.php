@@ -102,8 +102,13 @@ if ( ! class_exists( 'Astra_Ext_Blog_Pro_Images_Resizer' ) ) {
 							array(
 								array( $attributes['width'], $attributes['height'], $attributes['crop'] ),
 							),
-							array(
-								'itemprop' => 'image',
+							sprintf(
+								astra_attr(
+									'article-image-blog-archive',
+									array(
+										'class' => '',
+									)
+								)
 							)
 						);
 					}
@@ -121,7 +126,10 @@ if ( ! class_exists( 'Astra_Ext_Blog_Pro_Images_Resizer' ) ) {
 		 */
 		function blog_single_post_featured_image( $output ) {
 
-			$check_is_singular_post = is_singular( 'post' );
+			$post_types = apply_filters( 'astra_single_featured_image_post_types', array( 'post' ) );
+
+			$check_is_singular_post = is_singular( $post_types );
+
 			if ( $check_is_singular_post ) {
 
 				$blog_single_image_width  = astra_get_option( 'blog-single-post-image-width' );
@@ -139,6 +147,8 @@ if ( ! class_exists( 'Astra_Ext_Blog_Pro_Images_Resizer' ) ) {
 					$attributes = array();
 				}
 
+				$attributes = apply_filters( 'astra_single_featured_image_attributes', $attributes );
+
 				$image_id = get_post_thumbnail_id( get_the_ID(), 'full' );
 
 				if ( in_array( 'single-image', $blog_single_post_structure ) ) {
@@ -149,8 +159,13 @@ if ( ! class_exists( 'Astra_Ext_Blog_Pro_Images_Resizer' ) ) {
 							array(
 								array( $attributes['width'], $attributes['height'], $attributes['crop'] ),
 							),
-							array(
-								'itemprop' => 'image',
+							sprintf(
+								astra_attr(
+									'article-image-blog-single-post',
+									array(
+										'class' => '',
+									)
+								)
 							)
 						);
 					}

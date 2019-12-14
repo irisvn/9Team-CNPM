@@ -2,7 +2,7 @@
  * WooCommerce quantity buttons.
  *
  * @package Astra Addon
- * @since x.x.x
+ * @since 2.1.3
  */
 
 window.onload = function(e){ 

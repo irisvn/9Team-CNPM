@@ -24,15 +24,7 @@ function astra_ext_scroll_to_top_dynamic_css( $dynamic_css, $dynamic_css_filtere
 	$scroll_to_top_icon_bg_color   = astra_get_option( 'scroll-to-top-icon-bg-color', $link_color );
 	$scroll_to_top_icon_h_bg_color = astra_get_option( 'scroll-to-top-icon-h-bg-color' );
 	$scroll_to_top_icon_alignment  = astra_get_option( 'scroll-to-top-icon-position' );
-
-	if ( ! empty( $scroll_to_top_icon_bg_color ) ) {
-		$scroll_to_top_icon_bg_color = astra_hex_to_rgba( $scroll_to_top_icon_bg_color, .8 );
-	}
-
-	if ( ! empty( $scroll_to_top_icon_h_bg_color ) ) {
-		$scroll_to_top_icon_h_bg_color = astra_hex_to_rgba( $scroll_to_top_icon_h_bg_color, .8 );
-	}
-	$scroll_to_top_padded_padding = apply_filters( 'astra_scroll_top_padded_padding', 30 );
+	$scroll_to_top_padded_padding  = apply_filters( 'astra_scroll_top_padded_padding', 30 );
 
 	// Padded Layout - Padding.
 	$padded_layout_padding = astra_get_option( 'site-layout-padded-pad' );

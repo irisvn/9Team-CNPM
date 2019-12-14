@@ -59,7 +59,6 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Markup' ) ) {
 		public function astra_breadcumb_template() {
 
 			$breadcrumb_position = astra_get_option( 'breadcrumb-position' );
-			$breadcrumb_source   = astra_get_option( 'select-breadcrumb-source' );
 
 			$breadcrumb_enabled = false;
 
@@ -89,7 +88,6 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Markup' ) ) {
 		 */
 		public function astra_hook_breadcrumb_position() {
 			$breadcrumb_position = astra_get_option( 'breadcrumb-position' );
-			$breadcrumb_source   = astra_get_option( 'select-breadcrumb-source' );
 
 			if ( $breadcrumb_position && 'astra_header_markup_after' === $breadcrumb_position ) {
 				echo '<div class="main-header-bar ast-header-breadcrumb">

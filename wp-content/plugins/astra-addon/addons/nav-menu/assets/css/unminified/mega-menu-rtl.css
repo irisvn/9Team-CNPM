@@ -477,3 +477,7 @@
 .ast-header-break-point .ast-below-header .sub-menu .menu-item .ast-hide-menu-item + .ast-menu-toggle + .ast-mm-custom-content + .sub-menu {
   display: block !important;
 }
+
+.ast-hidden {
+  display: none !important;
+}

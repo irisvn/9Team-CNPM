@@ -48,7 +48,7 @@ if ( ! class_exists( 'Astra_Sticky_Header_Configs' ) ) {
 					'section'         => 'section-sticky-header',
 					'title'           => __( 'Above Header Colors', 'astra-addon' ),
 					'settings'        => array(),
-					'priority'        => 51,
+					'priority'        => 60,
 					'active_callback' => 'Astra_Sticky_Header_Configs::is_header_section_active',
 				),
 
@@ -63,7 +63,7 @@ if ( ! class_exists( 'Astra_Sticky_Header_Configs' ) ) {
 					'title'           => __( 'Header', 'astra-addon' ),
 					'section'         => 'section-sticky-header',
 					'transport'       => 'postMessage',
-					'priority'        => 55,
+					'priority'        => 60,
 					'active_callback' => 'Astra_Sticky_Header_Configs::is_header_section_active',
 				),
 				/**

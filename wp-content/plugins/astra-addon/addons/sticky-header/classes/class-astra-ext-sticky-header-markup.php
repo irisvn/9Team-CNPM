@@ -208,7 +208,7 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Markup' ) ) {
 				}
 
 				$logo = sprintf(
-					'<a href="%1$s" class="sticky-custom-logo" rel="home" itemprop="url">%2$s</a>',
+					'<a href="%1$s" class="sticky-custom-logo" rel="home" %3$s>%2$s</a>',
 					esc_url( home_url( '/' ) ),
 					wp_get_attachment_image(
 						$custom_logo_id,
@@ -216,6 +216,12 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Markup' ) ) {
 						false,
 						array(
 							'class' => 'custom-logo',
+						)
+					),
+					astra_attr(
+						'site-title-none-sticky-custom-link',
+						array(
+							'class' => '',
 						)
 					)
 				);
@@ -255,7 +261,7 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Markup' ) ) {
 				}
 
 				$html = sprintf(
-					'<a href="%1$s" class="sticky-custom-logo" rel="home" itemprop="url">%2$s</a>',
+					'<a href="%1$s" class="sticky-custom-logo" rel="home" %3$s>%2$s</a>',
 					esc_url( home_url( '/' ) ),
 					wp_get_attachment_image(
 						$custom_logo_id,
@@ -263,6 +269,12 @@ if ( ! class_exists( 'Astra_Ext_Sticky_Header_Markup' ) ) {
 						false,
 						array(
 							'class' => 'custom-logo',
+						)
+					),
+					astra_attr(
+						'site-title-sticky-custom-logo-link',
+						array(
+							'class' => '',
 						)
 					)
 				);

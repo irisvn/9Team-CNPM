@@ -97,7 +97,7 @@ if ( ! class_exists( 'Astra_Custom_Nav_Walker' ) ) {
 					$output .= "\n$indent<div " . astra_attr(
 						'ast-megamenu-full-attr',
 						array(
-							'class' => 'astra-full-megamenu-wrapper hidden' . esc_attr( $megamenu_divider_class ),
+							'class' => 'astra-full-megamenu-wrapper ast-hidden' . esc_attr( $megamenu_divider_class ),
 						)
 					) . ">\n";
 				}
@@ -105,7 +105,7 @@ if ( ! class_exists( 'Astra_Custom_Nav_Walker' ) ) {
 				$output .= "\n$indent<ul " . astra_attr(
 					'ast-megamenu-attr',
 					array(
-						'class' => "astra-megamenu sub-menu astra-mega-menu-width-{$this->megamenu_width}" . esc_attr( $megamenu_divider_class ) . ' hidden',
+						'class' => "astra-megamenu sub-menu astra-mega-menu-width-{$this->megamenu_width}" . esc_attr( $megamenu_divider_class ) . ' ast-hidden',
 					)
 				) . ">\n";
 
