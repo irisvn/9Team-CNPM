@@ -1,3 +1,7 @@
+v2.1.4
+- Improvement: Updated theme description and tags on WordPress.org. 
+- Improvement: Updated minimum required version of PHP on WordPress.org.
+
 v2.1.3
 - New: Introduced filter astra_blog_template_name for the overriding blog template.
 - Improvement: Filters to Disable Schema. ( https://wpastra.com/docs/disable-schema-markup/ )
