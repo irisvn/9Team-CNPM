@@ -264,7 +264,7 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 			$query_vars['paged']          = isset( $_POST['page_no'] ) ? absint( $_POST['page_no'] ) : 1;
 			$query_vars['post_status']    = 'publish';
 			$query_vars['posts_per_page'] = astra_get_option( 'shop-no-of-products' );
-			$query_vars                   = array_merge( $query_vars, wc()->query->get_catalog_ordering_args() );
+			$query_vars                   = wp_parse_args( $query_vars, wc()->query->get_catalog_ordering_args( $query_vars['orderby'], $query_vars['order'] ) );
 
 			$posts = new WP_Query( $query_vars );
 
@@ -1117,6 +1117,9 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 			if ( astra_get_option( 'checkout-labels-as-placeholders' ) ) {
 				Astra_Minify::add_css( $gen_path . 'checkout-labels-as-placeholders' . $file_prefix . '.css' );
 			}
+			if ( self::add_to_cart_quantity_btn_enabled() ) {
+				Astra_Minify::add_css( $gen_path . 'add-to-cart-quantity-btn' . $file_prefix . '.css' );
+			}
 
 			$quick_view = astra_get_option( 'shop-quick-view-enable' );
 
@@ -1171,7 +1174,10 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 			}
 
 			Astra_Minify::add_js( $gen_path . 'single-product-vertical-gallery' . $file_prefix . '.js' );
-			Astra_Minify::add_js( $gen_path . 'add-to-cart-quantity-btn' . $file_prefix . '.js' );
+
+			if ( self::add_to_cart_quantity_btn_enabled() ) {
+				Astra_Minify::add_js( $gen_path . 'add-to-cart-quantity-btn' . $file_prefix . '.js' );
+			}
 		}
 
 		/**
@@ -1443,6 +1449,16 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 				$localize_vars['header_below_stick_meta'] = get_post_meta( $shop_page_id, 'header-below-stick-meta', true );
 			}
 			return $localize_vars;
+		}
+
+		/**
+		 * Function to disable the Add to Cart quantity buttons
+		 *
+		 * @return boolean
+		 * @since 2.1.3
+		 */
+		static function add_to_cart_quantity_btn_enabled() {
+			return apply_filters( 'astra_add_to_cart_quantity_btn_enabled', true );
 		}
 	}
 }

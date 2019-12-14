@@ -551,12 +551,20 @@ html {
   list-style: none;
 }
 
+.blocks-gallery-grid {
+  margin: 0;
+}
+
 .wp-block-gallery {
   margin: 0;
 }
 
 .wp-block-gallery.is-cropped .blocks-gallery-item img {
   height: 100%;
+}
+
+.edit-post-visual-editor .blocks-gallery-grid {
+  margin: 0;
 }
 
 .wp-block-latest-posts {

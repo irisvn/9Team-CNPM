@@ -3,7 +3,7 @@
  * Plugin Name: Astra Pro
  * Plugin URI: https://wpastra.com/
  * Description: This plugin is an add-on for the Astra WordPress Theme. It offers premium features & functionalities that enhance your theming experience at next level.
- * Version: 2.1.2
+ * Version: 2.1.4
  * Author: Brainstorm Force
  * Author URI: https://www.brainstormforce.com
  * Text Domain: astra-addon
@@ -22,7 +22,7 @@ define( 'ASTRA_EXT_FILE', __FILE__ );
 define( 'ASTRA_EXT_BASE', plugin_basename( ASTRA_EXT_FILE ) );
 define( 'ASTRA_EXT_DIR', plugin_dir_path( ASTRA_EXT_FILE ) );
 define( 'ASTRA_EXT_URI', plugins_url( '/', ASTRA_EXT_FILE ) );
-define( 'ASTRA_EXT_VER', '2.1.2' );
+define( 'ASTRA_EXT_VER', '2.1.4' );
 define( 'ASTRA_EXT_TEMPLATE_DEBUG_MODE', false );
 
 
@@ -43,6 +43,8 @@ define( 'ASTRA_THEME_CONTAINER_BOX_PADDED_PADDING_TWICE', ( 40 * 2 ) );
  * Update Astra Addon
  */
 require_once ASTRA_EXT_DIR . 'classes/class-astra-addon-update.php';
+require_once ASTRA_EXT_DIR . 'classes/astra-addon-update-functions.php';
+require_once ASTRA_EXT_DIR . 'classes/class-astra-addon-background-updater.php';
 
 /**
  * Extensions

@@ -1,3 +1,17 @@
+v2.1.3
+- New: Introduced filter astra_blog_template_name for the overriding blog template.
+- Improvement: Filters to Disable Schema. ( https://wpastra.com/docs/disable-schema-markup/ )
+- Fix: Align Full and Align Wide option not working correctly for Gallery and Table GB blocks in case of full width stretched and full width contained layout.
+- Fix: Added support for Gutenberg Group block, which will be introduced in WordPress 5.3 version.
+- Fix: Compatibility with WordPress 5.3.
+- Fix: Gutenberg editor block mover controls not visible in case of full width stretched layout.
+- Fix: Primary menu padding bug on the closing of the menu on mobile devices.
+- Fix: Hide last menu item not working on mobile device when Above or Below header menu is merged. 
+- Fix: Submenu not opening below the header. ( https://wpastra.com/docs/display-sub-menu-below-the-header/ )
+- Fix: .hidden CSS class renamed to .ast-hidden class due to conflict with third-party plugins.
+- Fix: Full content displayed on the archive page for post format video, image, and attachment.
+- Fix: Fatal error when WordPress root directory does not have write access.
+
 v2.1.2
 - Improvement: WooCommerce Product Gutenberg blocks compatibility.
 - Improvement: Displaying full content for post format video on the archive page.

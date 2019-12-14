@@ -64,9 +64,10 @@
 
 #astra-sites-on-active .button.button-hero {
     font-size: 13px;
-    height: 30px;
+    min-height: 30px;
     line-height: 26px;
     padding: 0 12px;
+    height: 30px;
 }
 
 #astra-sites-on-active .astra-review-notice-container {

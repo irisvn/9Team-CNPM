@@ -83,7 +83,10 @@
 #customize-control-astra-settings-blog-archive-image-apply-sizes:not(.ast-hide) input[type="number"],
 #customize-control-astra-settings-blog-single-post-image-apply-sizes:not(.ast-hide) input[type="number"]{
     margin-right: 5px;
-    width: 65px;
+    padding: 3px 5px;
+    height: 28px;
+    width: 64px;
+    min-height: 28px;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     /* IE10+ CSS styles go here */

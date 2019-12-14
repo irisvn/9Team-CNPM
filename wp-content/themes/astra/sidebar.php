@@ -18,11 +18,9 @@ echo '<div ';
 	echo astra_attr(
 		'sidebar',
 		array(
-			'itemtype'  => 'https://schema.org/WPSideBar',
-			'itemscope' => 'itemscope',
-			'id'        => 'secondary',
-			'class'     => join( ' ', astra_get_secondary_class() ),
-			'role'      => 'complementary',
+			'id'    => 'secondary',
+			'class' => join( ' ', astra_get_secondary_class() ),
+			'role'  => 'complementary',
 		)
 	);
 	echo '>';

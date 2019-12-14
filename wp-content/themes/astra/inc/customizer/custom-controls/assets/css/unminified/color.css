@@ -6,11 +6,6 @@
   height: 22px !important;
 }
 
-.customize-control-ast-color .ast-color-picker-alpha.wp-color-picker {
-  width: 67px !important;
-  line-height: 17px;
-}
-
 .customize-control-ast-color .wp-picker-clear {
   margin-left: 2%;
 }
@@ -31,6 +26,7 @@
 
 @media (min-width: 1900px) {
   .iris-slider.iris-strip, .iris-strip.iris-slider.iris-alpha-slider {
+    /*rtl:ignore*/
     margin-left: 8px !important;
   }
 }

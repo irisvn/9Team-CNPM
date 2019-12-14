@@ -1118,6 +1118,17 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'.ast-site-identity' => array(
 						'padding' => '0',
 					),
+					// CSS to open submenu just below menu.
+					'.header-main-layout-1 .ast-flex.main-header-container, .header-main-layout-3 .ast-flex.main-header-container' => array(
+						'-webkit-align-content' => 'center',
+						'-ms-flex-line-pack'    => 'center',
+						'align-content'         => 'center',
+						'-webkit-box-align'     => 'center',
+						'-webkit-align-items'   => 'center',
+						'-moz-box-align'        => 'center',
+						'-ms-flex-align'        => 'center',
+						'align-items'           => 'center',
+					),
 				);
 
 				$parse_css .= astra_parse_css( $submenu_below_header );
@@ -1172,6 +1183,26 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $submenu_below_header );
 
 			endif;
+
+			if ( false === self::astra_submenu_open_below_header_fix() ) {
+				// If submenu below header fix is not to be loaded then add removed flex properties from class `ast-flex`.
+				// Also restore the padding to class `main-header-bar`.
+				$submenu_below_header = array(
+					// CSS to open submenu just below menu.
+					'.header-main-layout-1 .ast-flex.main-header-container, .header-main-layout-3 .ast-flex.main-header-container' => array(
+						'-webkit-align-content' => 'center',
+						'-ms-flex-line-pack'    => 'center',
+						'align-content'         => 'center',
+						'-webkit-box-align'     => 'center',
+						'-webkit-align-items'   => 'center',
+						'-moz-box-align'        => 'center',
+						'-ms-flex-align'        => 'center',
+						'align-items'           => 'center',
+					),
+				);
+
+				$parse_css .= astra_parse_css( $submenu_below_header );
+			}
 
 			$dynamic_css .= $parse_css;
 
@@ -1237,6 +1268,28 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			if ( false == astra_get_option( 'submenu-below-header', true ) &&
 				false === apply_filters(
 					'astra_submenu_below_header_fix',
+					false
+				) ) {
+
+					return false;
+			} else {
+
+				return true;
+			}
+
+		}
+
+		/**
+		 * Check backwards compatibility CSS for loading submenu below the header needs to be added.
+		 *
+		 * @since 2.1.3
+		 * @return boolean true if submenu below header fix is to be loaded, False if not.
+		 */
+		public static function astra_submenu_open_below_header_fix() {
+
+			if ( false == astra_get_option( 'submenu-open-below-header', true ) &&
+				false === apply_filters(
+					'astra_submenu_open_below_header_fix',
 					false
 				) ) {
 

@@ -78,7 +78,7 @@ if ( ! class_exists( 'Astra_Ext_Header_Sections_Markup' ) ) {
 			* Metabox setup
 			*/
 			add_filter( 'astra_meta_box_options', array( $this, 'add_options' ) );
-			add_action( 'astra_meta_box_markup_disable_sections_after', array( $this, 'add_options_markup' ) );
+			add_action( 'astra_meta_box_markup_disable_sections_after_primary_header', array( $this, 'add_options_markup' ) );
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
 

@@ -209,7 +209,7 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Headers_Markup' ) ) {
 
 				// Custom Site logo.
 				$html = sprintf(
-					'<a href="%1$s" class="custom-logo-link advanced-header-logo" rel="home" itemprop="url">%2$s</a>',
+					'<a href="%1$s" class="custom-logo-link advanced-header-logo" rel="home" %3$s >%2$s</a>',
 					esc_url( home_url( '/' ) ),
 					wp_get_attachment_image(
 						$custom_logo_id,
@@ -217,6 +217,12 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Headers_Markup' ) ) {
 						false,
 						array(
 							'class' => 'custom-logo',
+						)
+					),
+					astra_attr(
+						'site-title-custom-link',
+						array(
+							'class' => '',
 						)
 					)
 				);

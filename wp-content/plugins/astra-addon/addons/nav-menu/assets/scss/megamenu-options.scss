@@ -446,5 +446,34 @@
     }
 }
 
+/* WP Beta 5.3 compatibility CSS - Start */
 
+.astra-mm-settings-wrap {
+  .wp-picker-container {
+    .wp-color-result.button,
+    .wp-color-picker {
+      min-height: 24px;
+    }
+    input[type="text"] {
+      &.wp-color-picker {
+        padding: 3px 5px;
+        width: 71px;
+        line-height: 17px;
+        min-height: 24px;        
+      }
+    }
+  }
+}
+
+.wp-core-ui {
+  .astra-mm-settings-wrap {
+    .button {
+      &.button-small {
+        margin-left: 6px;      
+      }
+    }
+  }
+}
+
+/* WP Beta 5.3 compatibility CSS - Start */
 

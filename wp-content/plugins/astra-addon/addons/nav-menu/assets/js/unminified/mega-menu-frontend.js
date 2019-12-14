@@ -10,7 +10,7 @@ function display_mega_menu_on_load() {
         for (var i = 0; i < menu_content.length; i++) {
             menu_content[i].addEventListener( "mouseenter", function( event ) {
                 var mega_menu_container = event.target.querySelector(".astra-mega-menu-width-content");
-                mega_menu_container.classList.remove("hidden"); 
+                mega_menu_container.classList.remove("ast-hidden"); 
             });
         }
     }
@@ -21,7 +21,7 @@ function display_mega_menu_on_load() {
         for (var i = 0; i < menu_container.length; i++) {
             menu_container[i].addEventListener( "mouseenter", function( event ) {
                 var mega_menu_container = event.target.querySelector(".astra-mega-menu-width-menu-container");
-                mega_menu_container.classList.remove("hidden"); 
+                mega_menu_container.classList.remove("ast-hidden"); 
             });
         }
     }
@@ -33,8 +33,8 @@ function display_mega_menu_on_load() {
 			menu_full_width[i].addEventListener( "mouseenter", function( event ) {
                 var mega_menu_container = event.target.querySelector(".astra-full-megamenu-wrapper");
                 var mega_menu_submenu = event.target.querySelector(".astra-mega-menu-width-full");
-                mega_menu_container.classList.remove("hidden");
-                mega_menu_submenu.classList.remove("hidden");
+                mega_menu_container.classList.remove("ast-hidden");
+                mega_menu_submenu.classList.remove("ast-hidden");
             });
         }
     }

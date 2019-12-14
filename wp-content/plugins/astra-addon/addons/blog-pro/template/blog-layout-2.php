@@ -14,7 +14,16 @@
 
 		<?php astra_get_blog_post_title_meta(); ?>
 
-		<div class="entry-content clear" itemprop="text">
+		<div class="entry-content clear" 
+		<?php
+				echo astra_attr(
+					'article-entry-content-blog-layout-2',
+					array(
+						'class' => '',
+					)
+				);
+				?>
+				>
 
 			<?php astra_entry_content_before(); ?>
 

@@ -34,12 +34,6 @@ if ( ! class_exists( 'Astra_Ext_Nav_Menu_Markup' ) ) {
 		private static $mega_menu_style = '';
 
 		/**
-		 * Member Variable
-		 *
-		 * @var bool
-		 */
-		public static $mega_menu_used = false;
-		/**
 		 *  Initiator
 		 */
 		public static function get_instance() {
@@ -173,10 +167,6 @@ if ( ! class_exists( 'Astra_Ext_Nav_Menu_Markup' ) ) {
 
 			$menu_item->megamenu_template = get_post_meta( $menu_item->ID, '_menu_item_megamenu_template', true );
 
-			if ( '' !== $menu_item->megamenu ) {
-				self::$mega_menu_used = true;
-			}
-
 			return $menu_item;
 		}
 
@@ -293,9 +283,7 @@ if ( ! class_exists( 'Astra_Ext_Nav_Menu_Markup' ) ) {
 		 */
 		function add_primary_menu_classes( $classes ) {
 
-			if ( true === self::$mega_menu_used ) {
-				$classes[] = 'ast-mega-menu-enabled';
-			}
+			$classes[] = 'ast-mega-menu-enabled';
 			return $classes;
 		}
 
@@ -309,9 +297,7 @@ if ( ! class_exists( 'Astra_Ext_Nav_Menu_Markup' ) ) {
 		 */
 		function add_above_menu_classes( $classes ) {
 
-			if ( true === self::$mega_menu_used ) {
-				$classes[] = 'ast-mega-menu-enabled';
-			}
+			$classes[] = 'ast-mega-menu-enabled';
 			return $classes;
 		}
 
@@ -325,9 +311,7 @@ if ( ! class_exists( 'Astra_Ext_Nav_Menu_Markup' ) ) {
 		 */
 		function add_below_menu_classes( $classes ) {
 
-			if ( true === self::$mega_menu_used ) {
-				$classes[] = 'ast-mega-menu-enabled';
-			}
+			$classes[] = 'ast-mega-menu-enabled';
 			return $classes;
 		}
 

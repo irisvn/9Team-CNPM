@@ -54,23 +54,9 @@ if ( ! class_exists( 'Astra_Addon_Update' ) ) {
 			// Get auto saved version number.
 			$saved_version = Astra_Addon_Update::astra_addon_stored_version();
 
+			// If there is no saved version in the database then return.
 			if ( false === $saved_version ) {
-
-				// Get all customizer options.
-				$customizer_options = get_option( 'astra-settings' );
-
-				// Get all customizer options.
-				/* Add Current version constant "ASTRA_EXT_VER" here after 1.0.0-rc.9 update */
-				$version_array = array(
-					'astra-addon-auto-version' => ASTRA_EXT_VER,
-				);
-				$saved_version = ASTRA_EXT_VER;
-
-				// Merge customizer options with version.
-				$astra_options = wp_parse_args( $version_array, $customizer_options );
-
-				// Update auto saved version number.
-				update_option( 'astra-settings', $astra_options );
+				return;
 			}
 
 			// If equals then return.
@@ -100,45 +86,45 @@ if ( ! class_exists( 'Astra_Addon_Update' ) ) {
 
 			// Update to older version than 1.0.0-rc.7 version.
 			if ( version_compare( $saved_version, '1.0.0-rc.7', '<' ) && version_compare( ASTRA_THEME_VERSION, '1.0.22', '>=' ) ) {
-					self::v_1_0_0_rc_7();
+				self::v_1_0_0_rc_7();
 			}
 
 			// Update to older version than 1.0.0-rc.9 version.
 			if ( version_compare( $saved_version, '1.0.0-rc.9', '<' ) ) {
-					self::v_1_0_0_rc_9();
+				self::v_1_0_0_rc_9();
 			}
 
 			// Footer Widget Spacing Top/Right/Bottom/Left updated for responsive devices.
 			if ( version_compare( $saved_version, '1.2.0-beta.1', '<' ) ) {
-					self::v_1_2_0_beta_1();
+				self::v_1_2_0_beta_1();
 			}
 			// Site Lauout Padded layout Top/Right/Bottom/Left updated for responsive devices.
 			if ( version_compare( $saved_version, '1.2.0-beta.2', '<' ) ) {
-					self::v_1_2_0_beta_2();
+				self::v_1_2_0_beta_2();
 			}
 			// Update to older version than 1.2.0-beta.4 version.
 			if ( version_compare( $saved_version, '1.2.0-beta.4', '<' ) ) {
-					self::v_1_2_0_beta_4();
+				self::v_1_2_0_beta_4();
 			}
 			// Update to older version than 1.3.0-beta.4 version.
 			if ( version_compare( $saved_version, '1.3.0-beta.4', '<' ) ) {
-					self::v_1_3_0_beta_4();
+				self::v_1_3_0_beta_4();
 			}
 			// Update to older version than 1.3.0 version.
 			if ( version_compare( $saved_version, '1.3.0', '<' ) ) {
-					self::v_1_3_0();
+				self::v_1_3_0();
 			}
 			// Update to older version than 1.4.0-beta.3 version.
 			if ( version_compare( $saved_version, '1.4.0-beta.3', '<' ) ) {
-					self::v_1_4_0_beta_3();
+				self::v_1_4_0_beta_3();
 			}
 			// Update to older version than 1.4.0-beta.4 version.
 			if ( version_compare( $saved_version, '1.4.0-beta.4', '<' ) ) {
-					self::v_1_4_0_beta_4();
+				self::v_1_4_0_beta_4();
 			}
 
 			if ( version_compare( $saved_version, '1.4.0-beta.5', '<' ) ) {
-					self::v_1_4_0_beta_5();
+				self::v_1_4_0_beta_5();
 			}
 
 			if ( version_compare( $saved_version, '1.4.1', '<' ) ) {
@@ -172,30 +158,6 @@ if ( ! class_exists( 'Astra_Addon_Update' ) ) {
 			if ( version_compare( $saved_version, '1.8.8', '<' ) ) {
 				self::v1_8_8();
 			}
-
-			// Refresh Astra Addon CSS and JS Files on update.
-			Astra_Minify::refresh_assets();
-
-			$astra_addon_version = ASTRA_EXT_VER;
-
-			// Get all customizer options.
-			$customizer_options = get_option( 'astra-settings' );
-
-			// Get all customizer options.
-			$version_array = array(
-				'astra-addon-auto-version' => $astra_addon_version,
-			);
-
-			// Merge customizer options with version.
-			$astra_options = wp_parse_args( $version_array, $customizer_options );
-
-			// Update auto saved version number.
-			update_option( 'astra-settings', $astra_options );
-
-			// Update variables.
-			Astra_Theme_Options::refresh();
-
-			do_action( 'astra_addon_update_after' );
 		}
 
 		/**

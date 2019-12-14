@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'ASTRA_THEME_VERSION', '2.1.2' );
+define( 'ASTRA_THEME_VERSION', '2.1.3' );
 define( 'ASTRA_THEME_SETTINGS', 'astra-settings' );
 define( 'ASTRA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
@@ -38,6 +38,8 @@ require_once ASTRA_THEME_DIR . 'inc/core/common-functions.php';
  * Update theme
  */
 require_once ASTRA_THEME_DIR . 'inc/theme-update/class-astra-theme-update.php';
+require_once ASTRA_THEME_DIR . 'inc/theme-update/astra-update-functions.php';
+require_once ASTRA_THEME_DIR . 'inc/theme-update/class-astra-theme-background-updater.php';
 require_once ASTRA_THEME_DIR . 'inc/theme-update/class-astra-pb-compatibility.php';
 
 
@@ -88,6 +90,8 @@ require_once ASTRA_THEME_DIR . 'inc/class-astra-after-setup-theme.php';
 
 // Required files.
 require_once ASTRA_THEME_DIR . 'inc/core/class-astra-admin-helper.php';
+
+require_once ASTRA_THEME_DIR . 'inc/schema/class-astra-schema.php';
 
 if ( is_admin() ) {
 

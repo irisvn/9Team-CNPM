@@ -37,12 +37,16 @@ class Astra_Addon_AMP_Compatibility {
 			return;
 		}
 
-		// Prioritize Astra Addon's CSS in AMP layouts.
-		remove_action( 'wp_enqueue_scripts', array( Astra_Minify::get_instance(), 'enqueue_scripts' ) );
-		add_action( 'wp_enqueue_scripts', array( Astra_Minify::get_instance(), 'enqueue_scripts' ), 7 );
+		add_filter( 'astra_cache_asset_type', array( $this, 'cache_add_amp_prefix' ) );
+
+		if ( is_callable( 'Astra_Minify::get_instance' ) ) {
+			// Prioritize Astra Addon's CSS in AMP layouts.
+			remove_action( 'wp_enqueue_scripts', array( Astra_Minify::get_instance(), 'enqueue_scripts' ) );
+			add_action( 'wp_enqueue_scripts', array( Astra_Minify::get_instance(), 'enqueue_scripts' ), 7 );
+		}
 
 		// Scroll to top Addon.
-		if ( true === Astra_Ext_Extension::is_active( 'scroll-to-top' ) ) {
+		if ( true === Astra_Ext_Extension::is_active( 'scroll-to-top' ) && is_callable( 'Astra_Ext_Scroll_To_Top_Markup::get_instance' ) ) {
 			remove_action( 'wp_footer', array( Astra_Ext_Scroll_To_Top_Markup::get_instance(), 'html_markup_loader' ) );
 			remove_action( 'astra_get_css_files', array( Astra_Ext_Scroll_To_Top_Markup::get_instance(), 'add_styles' ) );
 			remove_action( 'astra_get_js_files', array( Astra_Ext_Scroll_To_Top_Markup::get_instance(), 'add_scripts' ) );
@@ -50,7 +54,7 @@ class Astra_Addon_AMP_Compatibility {
 		}
 
 		// Sticky Header.
-		if ( true === Astra_Ext_Extension::is_active( 'sticky-header' ) ) {
+		if ( true === Astra_Ext_Extension::is_active( 'sticky-header' ) && is_callable( 'Astra_Ext_Sticky_Header_Markup::get_instance' ) ) {
 			remove_action( 'astra_get_css_files', array( Astra_Ext_Sticky_Header_Markup::get_instance(), 'add_styles' ) );
 			remove_action( 'astra_get_js_files', array( Astra_Ext_Sticky_Header_Markup::get_instance(), 'add_scripts' ) );
 			remove_filter( 'astra_addon_js_localize', array( Astra_Ext_Sticky_Header_Markup::get_instance(), 'localize_variables' ) );
@@ -64,20 +68,20 @@ class Astra_Addon_AMP_Compatibility {
 		}
 
 		// Nav Menu Addon.
-		if ( true === Astra_Ext_Extension::is_active( 'nav-menu' ) ) {
+		if ( true === Astra_Ext_Extension::is_active( 'nav-menu' ) && is_callable( 'Astra_Ext_Nav_Menu_Loader::get_instance' ) ) {
 			remove_action( 'astra_get_css_files', array( Astra_Ext_Nav_Menu_Loader::get_instance(), 'add_styles' ) );
 			remove_filter( 'wp_nav_menu_args', array( Astra_Ext_Nav_Menu_Loader::get_instance(), 'modify_nav_menu_args' ) );
 			remove_filter( 'astra_dynamic_css', 'astra_ext_mega_menu_dynamic_css' );
 		}
 
 		// Page Header Addon.
-		if ( true === Astra_Ext_Extension::is_active( 'advanced-headers' ) ) {
+		if ( true === Astra_Ext_Extension::is_active( 'advanced-headers' ) && is_callable( 'Astra_Ext_Advanced_Headers_Markup::get_instance' ) ) {
 			remove_action( 'wp_enqueue_scripts', array( Astra_Ext_Advanced_Headers_Markup::get_instance(), 'add_scripts' ), 9 );
 			add_action( 'wp_enqueue_scripts', array( Astra_Ext_Advanced_Headers_Markup::get_instance(), 'add_scripts' ), 6 );
 		}
 
 		// Blog Pro Addon.
-		if ( true === Astra_Ext_Extension::is_active( 'blog-pro' ) ) {
+		if ( true === Astra_Ext_Extension::is_active( 'blog-pro' ) && is_callable( 'Astra_Ext_Blog_Pro_Markup::get_instance' ) ) {
 			// Remove Auto Load Previous Posts option.
 			remove_action( 'init', array( Astra_Ext_Blog_Pro_Markup::get_instance(), 'init_action' ) );
 			add_filter( 'astra_get_option_ast-auto-prev-post', '__return_false' );
@@ -109,6 +113,16 @@ class Astra_Addon_AMP_Compatibility {
 		}
 
 		add_filter( 'astra_addon_render_custom_layout_content', array( $this, 'custom_layout_disable_on_amp' ), 10, 2 );
+	}
+
+	/**
+	 * Add prefix to Assets cache key if on AMP endpoint.
+	 *
+	 * @param String $asset_type Asset type.
+	 * @return String Asset type with AMP Prefix.
+	 */
+	public function cache_add_amp_prefix( $asset_type ) {
+		return 'amp-' . $asset_type;
 	}
 
 	/**

@@ -2,11 +2,6 @@
   margin: 0;
 }
 
-.customize-control-ast-background .ast-color-control.wp-color-picker {
-  width: 67px !important;
-  line-height: 17px;
-}
-
 .customize-control-ast-background .wp-picker-clear {
   margin-left: 2%;
 }
@@ -211,11 +206,6 @@
   height: 22px !important;
 }
 
-.customize-control-ast-color .ast-color-picker-alpha.wp-color-picker {
-  width: 67px !important;
-  line-height: 17px;
-}
-
 .customize-control-ast-color .wp-picker-clear {
   margin-left: 2%;
 }
@@ -236,6 +226,7 @@
 
 @media (min-width: 1900px) {
   .iris-slider.iris-strip, .iris-strip.iris-slider.iris-alpha-slider {
+    /*rtl:ignore*/
     margin-left: 8px !important;
   }
 }
@@ -307,6 +298,16 @@
 .ast-fields-wrap .customize-control .ast-control-tooltip {
   right: 15px;
   top: 6px;
+}
+
+/* Select2 WP 5.3 compatibility */
+.customize-control .select2-search input[type="text"].select2-search__field {
+  min-height: 17px;
+}
+
+input[type="text"].select2-search__field {
+  line-height: 1;
+  border-radius: 0;
 }
 
 /* CSS to show popups without scroll */
@@ -506,11 +507,6 @@
 
 .customize-control-ast-responsive-color .wp-picker-container {
   float: left;
-}
-
-.customize-control-ast-responsive-color .ast-responsive-color.wp-color-picker {
-  width: 67px !important;
-  line-height: 17px;
 }
 
 .customize-control-ast-responsive-color .wp-picker-clear {
@@ -1114,10 +1110,6 @@
 
 .ast-group-tabs ul.ast-group-list .ui-corner-top:not(:first-child) {
   border-left-width: 0;
-}
-
-.ast-field-settings-modal .customize-control-ast-responsive-background .ast-responsive-bg-color-control.wp-color-picker, .ast-field-settings-modal .customize-control-ast-responsive-color .ast-responsive-color.wp-color-picker {
-  width: 67px !important;
 }
 
 .ast-field-settings-modal .customize-control-ast-responsive-background .wp-picker-clear, .ast-field-settings-modal .customize-control-ast-responsive-color .wp-picker-clear {

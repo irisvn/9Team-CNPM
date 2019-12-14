@@ -4176,6 +4176,14 @@
         }
     },
     {
+        "Jomolhari": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Josefin Sans": {
             "variants": [
                 "100",
@@ -7674,9 +7682,15 @@
     {
         "Rosario": {
             "variants": [
+                "300",
                 "regular",
-                "italic",
+                "500",
+                "600",
                 "700",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
                 "700italic"
             ],
             "category": "sans-serif"

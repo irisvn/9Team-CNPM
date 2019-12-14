@@ -115,7 +115,7 @@ class Astra_Cache_Base {
 			$slug = 'archive';
 		}
 
-		return $slug;
+		return apply_filters( 'astra_cache_asset_query_var', $slug );
 	}
 
 	/**
@@ -206,7 +206,7 @@ class Astra_Cache_Base {
 			$title = 'home';
 		}
 
-		return $title;
+		return apply_filters( 'astra_cache_asset_type', $title );
 	}
 
 	/**
