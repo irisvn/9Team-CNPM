@@ -23,4 +23,3 @@ node_modules/
 *.sqlite
 wp-config.php
 .gitignore
-readme.html
