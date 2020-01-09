@@ -467,6 +467,38 @@ function astra_typography_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' 
 	/* Parse CSS from array() */
 	$css_output = astra_parse_css( $css_output );
 
+	/**
+	 * Elementor & Gutenberg button backward compatibility for default styling.
+	 */
+	if ( page_builder_addon_button_style_css() ) {
+
+		$global_button_page_builder_css_desktop = array(
+			/**
+			 * Elementor Heading - <h4>
+			 */
+			'.elementor-widget-heading h4.elementor-heading-title' => array(
+				'line-height' => esc_attr( $h4_line_height ),
+			),
+
+			/**
+			 * Elementor Heading - <h5>
+			 */
+			'.elementor-widget-heading h5.elementor-heading-title' => array(
+				'line-height' => esc_attr( $h5_line_height ),
+			),
+
+			/**
+			 * Elementor Heading - <h6>
+			 */
+			'.elementor-widget-heading h6.elementor-heading-title' => array(
+				'line-height' => esc_attr( $h6_line_height ),
+			),
+		);
+
+		/* Parse CSS from array() */
+		$css_output .= astra_parse_css( $global_button_page_builder_css_desktop );
+	}
+
 	$tablet_css = array(
 
 		'.main-navigation'                          => array(
@@ -669,4 +701,14 @@ function astra_addon_typography_anchors_in_css_selectors_heading() {
 		return false;
 	}
 
+}
+
+/**
+ * Check backwards compatibility to not load default CSS for the button styling of Page Builders.
+ *
+ * @since 2.2.0
+ * @return boolean true if button style CSS should be loaded, False if not.
+ */
+function page_builder_addon_button_style_css() {
+	return apply_filters( 'astra_addon_page_builder_button_style_css', astra_get_option( 'pb-button-color-compatibility-addon', true ) );
 }

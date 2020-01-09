@@ -38,6 +38,9 @@
 			}
 
 			$( document.body ).on( 'added_to_cart', astraSingleProductAjax._updateButton );
+
+			$( "form.variations_form" ).on( 'woocommerce_variation_has_changed', astraSingleProductAjax._updateSaleBadge );
+
 		},
 
 		/**
@@ -139,6 +142,30 @@
 				}
 
 				$( document.body ).trigger( 'wc_cart_button_updated', [ button ] );
+			}
+		},
+
+		/**
+		 * Update sale badge percentage when product variation is switched.
+		 */
+		_updateSaleBadge: function( e ) 
+		{
+			var $form = $(this);
+			var selected_variation = $form.find('.variation_id').val();
+			
+			if( '' != selected_variation ) {
+				var sale_badge = $form.closest( '.product-type-variable').find( 'span.onsale' );
+				var sale_notification = sale_badge.data( 'notification' );
+
+				if( 'sale-percentage' == sale_notification ) {
+					var sale_data = sale_badge.data('sale');
+
+					if( 'undefined' != typeof sale_data[selected_variation] ) {
+						var sale_percentage_text = sale_badge.data('sale-per-text');
+						sale_percentage_text = sale_percentage_text.replace( '[value]', sale_data[selected_variation] );
+						sale_badge.text( sale_percentage_text );
+					}
+				}
 			}
 		}
 

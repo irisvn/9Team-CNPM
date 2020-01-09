@@ -338,7 +338,9 @@ class Astra_Breadcrumb_Trail {
 				}
 
 				// Create list item attributes.
-				$attributes = $this->args['schema'] ? $item_schema_attr : '' . ' class="' . $item_class . '"';
+				$attributes = $this->args['schema'] ? $item_schema_attr : '';
+
+				$attributes .= ' class="' . $item_class . '"';
 				
 				if ( $this->args['schema'] ) {
 					// Build the meta position HTML.

@@ -54,6 +54,30 @@
 	astra_css( 'astra-settings[line-height-widget-content]', 'line-height', '.secondary .widget > *:not(.widget-title)' );
 	astra_css( 'astra-settings[text-transform-widget-content]', 'text-transform', '.secondary .widget > *:not(.widget-title)' );
 
+	// Page builder elementor CSS for line height.
+	if( astTypography.addon_page_builder_button_style_css ) {
+		// Check if anchors should be loaded in the CSS for headings.	
+		if (true == astraCustomizer.includeAnchorsInHeadindsCss) {
+			astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4, .entry-content h4 a, .elementor-widget-heading h4.elementor-heading-title');
+			astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5, .entry-content h5 a, .elementor-widget-heading h5.elementor-heading-title');
+			astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6, .entry-content h6 a, .elementor-widget-heading h6.elementor-heading-title');
+		} else {
+			astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4, .elementor-widget-heading h4.elementor-heading-title');
+			astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5, .elementor-widget-heading h5.elementor-heading-title');
+			astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6, .elementor-widget-heading h6.elementor-heading-title');
+		}
+	} else {
+		// Check if anchors should be loaded in the CSS for headings.	
+		if (true == astraCustomizer.includeAnchorsInHeadindsCss) {
+			astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4, .entry-content h4 a');
+			astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5, .entry-content h5 a');
+			astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6, .entry-content h6 a');
+		} else {
+			astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4');
+			astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5');
+			astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6');
+		}
+	}
 	// Check if anchors should be loaded in the CSS for headings.	
 	if (true == astraCustomizer.includeAnchorsInHeadindsCss) {
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h1]', 'h1, .entry-content h1, .entry-content h1 a' );	
@@ -73,17 +97,14 @@
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h4]', 'h4, .entry-content h4, .entry-content h4 a' );	
 		astra_css('astra-settings[font-weight-h4]', 'font-weight', 'h4, .entry-content h4, .entry-content h4 a');
-		astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4, .entry-content h4 a');
 		astra_css('astra-settings[text-transform-h4]', 'text-transform', 'h4, .entry-content h4, .entry-content h4 a');
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h5]', 'h5, .entry-content h5, .entry-content h5 a' );	
 		astra_css('astra-settings[font-weight-h5]', 'font-weight', 'h5, .entry-content h5, .entry-content h5 a');
-		astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5, .entry-content h5 a');
 		astra_css('astra-settings[text-transform-h5]', 'text-transform', 'h5, .entry-content h5, .entry-content h5 a');
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h6]', 'h6, .entry-content h6, .entry-content h6 a' );	
 		astra_css('astra-settings[font-weight-h6]', 'font-weight', 'h6, .entry-content h6, .entry-content h6 a');
-		astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6, .entry-content h6 a');
 		astra_css('astra-settings[text-transform-h6]', 'text-transform', 'h6, .entry-content h6, .entry-content h6 a');
 	} else {
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h1]', 'h1, .entry-content h1' );
@@ -103,17 +124,14 @@
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h4]', 'h4, .entry-content h4' );
 		astra_css('astra-settings[font-weight-h4]', 'font-weight', 'h4, .entry-content h4');	
-		astra_css('astra-settings[line-height-h4]', 'line-height', 'h4, .entry-content h4');
 		astra_css('astra-settings[text-transform-h4]', 'text-transform', 'h4, .entry-content h4');
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h5]', 'h5, .entry-content h5' );
 		astra_css('astra-settings[font-weight-h5]', 'font-weight', 'h5, .entry-content h5');	
-		astra_css('astra-settings[line-height-h5]', 'line-height', 'h5, .entry-content h5');
 		astra_css('astra-settings[text-transform-h5]', 'text-transform', 'h5, .entry-content h5');
 
 		astra_generate_outside_font_family_css( 'astra-settings[font-family-h6]', 'h6, .entry-content h6' );
 		astra_css('astra-settings[font-weight-h6]', 'font-weight', 'h6, .entry-content h6');	
-		astra_css('astra-settings[line-height-h6]', 'line-height', 'h6, .entry-content h6');
 		astra_css('astra-settings[text-transform-h6]', 'text-transform', 'h6, .entry-content h6');
 	}
 

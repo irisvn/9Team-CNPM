@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -250,6 +250,10 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		private function register_sub_control_setting( $control_config, $wp_customize ) {
 
 			$sub_control_name = ASTRA_THEME_SETTINGS . '[' . astra_get_prop( $control_config, 'name' ) . ']';
+
+			if ( isset( $wp_customize->get_control( $sub_control_name )->id ) ) {
+				return;
+			}
 
 			$parent = astra_get_prop( $control_config, 'parent' );
 			$tab    = astra_get_prop( $control_config, 'tab' );
@@ -833,9 +837,10 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			wp_enqueue_script( 'astra-customizer-preview-js', ASTRA_THEME_URI . 'assets/js/' . $dir . '/customizer-preview' . $js_prefix, array( 'customize-preview' ), ASTRA_THEME_VERSION, null );
 
 			$localize_array = array(
-				'headerBreakpoint'            => astra_header_break_point(),
-				'includeAnchorsInHeadindsCss' => Astra_Dynamic_CSS::anchors_in_css_selectors_heading(),
-				'googleFonts'                 => Astra_Font_Families::get_google_fonts(),
+				'headerBreakpoint'              => astra_header_break_point(),
+				'includeAnchorsInHeadindsCss'   => Astra_Dynamic_CSS::anchors_in_css_selectors_heading(),
+				'googleFonts'                   => Astra_Font_Families::get_google_fonts(),
+				'page_builder_button_style_css' => Astra_Dynamic_CSS::page_builder_button_style_css(),
 			);
 
 			wp_localize_script( 'astra-customizer-preview-js', 'astraCustomizer', $localize_array );

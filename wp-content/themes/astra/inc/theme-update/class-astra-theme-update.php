@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -418,7 +418,7 @@ if ( ! class_exists( 'Astra_Theme_Update' ) ) {
 			update_option( ASTRA_THEME_SETTINGS, $astra_options );
 
 			update_option( '_astra_pb_compatibility_offset', 1 );
-			update_option( '_astra_pb_compatibility_time', date( 'Y-m-d H:i:s' ) );
+			update_option( '_astra_pb_compatibility_time', gmdate( 'Y-m-d H:i:s' ) );
 		}
 
 		/**

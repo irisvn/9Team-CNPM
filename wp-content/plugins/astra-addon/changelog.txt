@@ -1,3 +1,26 @@
+v2.2.4
+- Fix: Possible recursion in the update functions.
+
+v2.2.3
+- Fix: Error on plugins page on sites where curl extension is not enabled.
+
+v2.2.2
+- Improvement: Update Brainstorm Updater to v1.23.2.
+
+v2.2.1
+- Fix: Error on plugins page with sites having WP version < 5.3.
+- Fix: Custom Layout content render issue.
+
+v2.2.0
+- New: Added button and heading compatibility with Page Builders ( https://wpastra.com/astra-2-2/ ).
+- Fix: Page header background image accessibility issue.
+- Fix: Theme minimum version notice appearing even when theme is updated.
+- Fix: Sale batch price issue with variable product.
+- Fix: Post title not appearing issue with ToolSet Plugin.
+- Fix: Megamenu admin RTL CSS fixes.
+- Fix: Page Header admin RTL CSS fixes.
+- Fix: WooCommerce plus minus button conflict with Convert Pro plugin.
+
 v2.1.4
 - Fix: Undefined function PHP error occurs when theme functions are not loaded in a few scenarios.
 - Fix: Too few argument PHP warning in comment section.

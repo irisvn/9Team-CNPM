@@ -25,7 +25,11 @@ if ( ! class_exists( 'Astra_Addon_Background_Updater' ) ) {
 		 *
 		 * @var array
 		 */
-		private static $db_updates = array();
+		private static $db_updates = array(
+			'2.2.0' => array(
+				'astra_addon_page_builder_button_color_compatibility',
+			),
+		);
 
 		/**
 		 *  Constructor
@@ -116,6 +120,20 @@ if ( ! class_exists( 'Astra_Addon_Background_Updater' ) ) {
 		}
 
 		/**
+		 * Is the DB update needed?
+		 *
+		 * @since 2.2.0
+		 * @return boolean
+		 */
+		private function is_db_updated() {
+			$customizer_options = get_option( 'astra-settings' );
+
+			$addon_auto_version = ( isset( $customizer_options['astra-addon-auto-version'] ) && '' !== $customizer_options['astra-addon-auto-version'] ) ? $customizer_options['astra-addon-auto-version'] : null;
+
+			return version_compare( $addon_auto_version, ASTRA_EXT_VER, '=' );
+		}
+
+		/**
 		 * Get list of DB update callbacks.
 		 *
 		 * @since 2.1.3
@@ -132,30 +150,34 @@ if ( ! class_exists( 'Astra_Addon_Background_Updater' ) ) {
 
 			$current_db_version = Astra_Addon_Update::astra_addon_stored_version();
 
-			error_log( 'Batch Process Started!' );
-			foreach ( $this->get_db_update_callbacks() as $version => $update_callbacks ) {
-				if ( version_compare( $current_db_version, $version, '<' ) ) {
-					foreach ( $update_callbacks as $update_callback ) {
-						error_log( sprintf( 'Queuing %s - %s', $version, $update_callback ) );
+			error_log( 'Astra Addon: Batch Process Started!' );
+			if ( count( $this->get_db_update_callbacks() ) > 0 ) {
+				foreach ( $this->get_db_update_callbacks() as $version => $update_callbacks ) {
+					if ( version_compare( $current_db_version, $version, '<' ) ) {
+						foreach ( $update_callbacks as $update_callback ) {
+							error_log( sprintf( 'Astra Addon: Queuing %s - %s', $version, $update_callback ) );
 
-						self::$background_updater->push_to_queue( $update_callback );
+							self::$background_updater->push_to_queue( $update_callback );
+						}
 					}
 				}
+
+				$customizer_options = get_option( 'astra-settings' );
+
+				// Get all customizer options.
+				$version_array = array(
+					'is_addon_queue_running' => true,
+				);
+
+				// Merge customizer options with version.
+				$astra_options = wp_parse_args( $version_array, $customizer_options );
+
+				update_option( 'astra-settings', $astra_options );
+
+				self::$background_updater->push_to_queue( 'update_db_version' );
+			} else {
+				self::$background_updater->push_to_queue( 'update_db_version' );
 			}
-
-			$customizer_options = get_option( 'astra-settings' );
-
-			// Get all customizer options.
-			$version_array = array(
-				'is_addon_queue_running' => true,
-			);
-
-			// Merge customizer options with version.
-			$astra_options = wp_parse_args( $version_array, $customizer_options );
-
-			update_option( 'astra-settings', $astra_options );
-
-			self::$background_updater->push_to_queue( 'update_db_version' );
 			self::$background_updater->save()->dispatch();
 		}
 
@@ -193,6 +215,19 @@ if ( ! class_exists( 'Astra_Addon_Background_Updater' ) ) {
 			// If equals then return.
 			if ( version_compare( $saved_version, ASTRA_EXT_VER, '=' ) ) {
 				do_action( 'astra_addon_update_after' );
+				// Get all customizer options.
+				$customizer_options = get_option( 'astra-settings' );
+
+				// Get all customizer options.
+				$options_array = array(
+					'is_addon_queue_running' => false,
+				);
+
+				// Merge customizer options with version.
+				$astra_options = wp_parse_args( $options_array, $customizer_options );
+
+				// Update auto saved version number.
+				update_option( 'astra-settings', $astra_options );
 				return;
 			}
 
@@ -215,6 +250,8 @@ if ( ! class_exists( 'Astra_Addon_Background_Updater' ) ) {
 
 			// Update auto saved version number.
 			update_option( 'astra-settings', $astra_options );
+
+			error_log( 'Astra Addon: DB version updated!' );
 
 			// Update variables.
 			Astra_Theme_Options::refresh();

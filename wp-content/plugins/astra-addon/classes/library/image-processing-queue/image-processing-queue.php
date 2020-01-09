@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2019 Delicious Brains. All rights reserved.
+ * Copyright (c) 2020 Delicious Brains. All rights reserved.
  *
  * Released under the GPL license
  * https://www.opensource.org/licenses/gpl-license.php

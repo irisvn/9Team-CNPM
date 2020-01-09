@@ -100,7 +100,8 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 ( function() {
 
-	var menu_toggle_all 	= document.querySelectorAll( '.main-header-menu-toggle' );
+	var menu_toggle_all 	 = document.querySelectorAll( '.main-header-menu-toggle' );
+	var menu_click_listeners = {};
 
 	/* Add break point Class and related trigger */
 	var updateHeaderBreakPoint = function () {
@@ -207,7 +208,10 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 				menu_toggle_all[i].setAttribute('data-index', i);
 
-				menu_toggle_all[i].addEventListener('click', astraNavMenuToggle, false);
+				if ( ! menu_click_listeners[i] ) {
+					menu_click_listeners[i] = menu_toggle_all[i];
+					menu_toggle_all[i].addEventListener('click', astraNavMenuToggle, false);
+				}
 
 				if ('undefined' !== typeof __main_header_all[i]) {
 

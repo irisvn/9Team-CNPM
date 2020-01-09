@@ -1,14 +1,14 @@
-# Copyright (C) 2019 Brainstorm Force
+# Copyright (C) 2020 Brainstorm Force
 # This file is distributed under the same license as the Astra Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Astra Pro 2.1.3\n"
+"Project-Id-Version: Astra Pro 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astra-addon\n"
-"POT-Creation-Date: 2019-11-12 09:53:37+00:00\n"
+"POT-Creation-Date: 2020-01-02 12:23:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -808,72 +808,72 @@ msgstr ""
 msgid "Page Headers"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:269
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:275
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:273
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:279
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:295
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:301
 #. translators: %s: singular custom post type name
 msgid "%s updated."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:271
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:275
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:297
 #. translators: %s: singular custom post type name
 msgid "Custom %s updated."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:273
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:277
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:299
 #. translators: %s: singular custom post type name
 msgid "Custom %s deleted."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:277
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:281
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:303
 #. translators: %1$s: singular custom post type name ,%2$s: date and time of
 #. the revision
 msgid "%1$s restored to revision from %2$s"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:279
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:283
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:305
 #. translators: %s: singular custom post type name
 msgid "%s published."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:281
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:285
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:307
 #. translators: %s: singular custom post type name
 msgid "%s saved."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:283
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:287
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:309
 #. translators: %s: singular custom post type name
 msgid "%s submitted."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:285
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:289
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:311
 #. translators: %s: singular custom post type name
 msgid "%s scheduled for."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:287
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:291
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:313
 #. translators: %s: singular custom post type name
 msgid "%s draft updated."
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:304
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:308
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:405
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1282
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:84
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1516
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1517
 msgid "Display Rules"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:305
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-loader.php:309
 #: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-loader.php:85
 msgid "Date"
 msgstr ""
@@ -882,12 +882,12 @@ msgstr ""
 msgid "Add Custom HTML"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:572
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:574
 #: addons/lifterlms/classes/class-astra-ext-lifterlms-loader.php:139
 msgid "No Page Headers Found"
 msgstr ""
 
-#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:581
+#: addons/advanced-headers/classes/class-astra-ext-advanced-headers-markup.php:583
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:397
 msgid "Page Header"
 msgstr ""
@@ -1327,7 +1327,7 @@ msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1273
 #: addons/advanced-headers/includes/admin-edit-location-rules.php:13
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1508
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1509
 #: addons/scroll-to-top/classes/sections/class-astra-scroll-to-top-configs.php:50
 msgid "Display On"
 msgstr ""
@@ -1337,12 +1337,12 @@ msgid "Add locations for where this Advanced Header should appear."
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1286
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1520
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1521
 msgid "Add Display Rule"
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1295
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1529
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1530
 msgid "Do Not Display On"
 msgstr ""
 
@@ -1352,20 +1352,20 @@ msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1304
 #: addons/advanced-headers/includes/admin-edit-location-rules.php:28
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1537
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1538
 msgid "Exclude On"
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1307
 #: addons/advanced-headers/includes/admin-edit-location-rules.php:22
 #: addons/advanced-headers/includes/admin-edit-location-rules.php:34
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1540
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1541
 #: classes/modules/target-rule/class-astra-target-rules-fields.php:851
 msgid "Add Exclusion Rule"
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1317
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1550
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1551
 msgid "User Roles"
 msgstr ""
 
@@ -1374,12 +1374,12 @@ msgid "Targer header based on user role."
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1325
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1558
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1559
 msgid "Users"
 msgstr ""
 
 #: addons/advanced-headers/classes/class-astra-ext-advanced-headers-meta.php:1328
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1561
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1562
 msgid "Add User Rule"
 msgstr ""
 
@@ -2208,7 +2208,7 @@ msgstr ""
 #: classes/modules/target-rule/class-astra-target-rules-fields.php:777
 #: classes/modules/target-rule/class-astra-target-rules-fields.php:1093
 #: classes/modules/target-rule/class-astra-target-rules-fields.php:1125
-#: classes/modules/target-rule/class-astra-target-rules-fields.php:1605
+#: classes/modules/target-rule/class-astra-target-rules-fields.php:1611
 msgid "Select"
 msgstr ""
 
@@ -2255,11 +2255,11 @@ msgstr ""
 msgid "Desktop + Mobile"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1483
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1484
 msgid "Priority"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1491
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1492
 #: addons/blog-pro/classes/sections/class-astra-customizer-blog-pro-single-configs.php:123
 #: addons/nav-menu/classes/sections/class-astra-nav-menu-above-header-layout.php:49
 #: addons/nav-menu/classes/sections/class-astra-nav-menu-below-header-layout.php:50
@@ -2276,29 +2276,29 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1492
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1493
 msgid ""
 "Spacing can be given any positive number with or without units as "
 "&quot;5&quot; or &quot;5px&quot;. Default unit is &quot;px&quot;"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1497
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1498
 msgid "Top Spacing"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1501
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1502
 msgid "Bottom Spacing"
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1509
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1510
 msgid "Add locations for where this Custom Layout should appear."
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1530
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1531
 msgid "This Custom Layout will not appear at these locations."
 msgstr ""
 
-#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1551
+#: addons/advanced-hooks/classes/class-astra-ext-advanced-hooks-meta.php:1552
 msgid "Target header based on user role."
 msgstr ""
 
@@ -2851,7 +2851,7 @@ msgstr ""
 
 #: addons/edd/classes/class-astra-ext-edd-markup.php:253
 #: addons/edd/classes/sections/class-astra-edd-general-configs.php:68
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:901
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:915
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-general-configs.php:131
 msgid "Cart"
 msgstr ""
@@ -3488,15 +3488,15 @@ msgstr ""
 msgid "Border for Menu Items"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:124
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:127
 msgid "Search Pages/ Posts"
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:125
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:128
 msgid "Saving .."
 msgstr ""
 
-#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:126
+#: addons/nav-menu/classes/class-astra-ext-nav-menu-loader.php:129
 msgid "Saved"
 msgstr ""
 
@@ -4032,12 +4032,12 @@ msgstr ""
 msgid "View cart"
 msgstr ""
 
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:695
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:696
 msgid "Sale!"
 msgstr ""
 
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1290
-#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1310
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1304
+#: addons/woocommerce/classes/class-astra-ext-woocommerce-markup.php:1324
 #: addons/woocommerce/classes/sections/class-astra-woocommerce-shop-configs.php:452
 #. translators: 1: Cart Title Markup, 2: Cart Icon Markup
 msgid "Quick View"
@@ -4627,7 +4627,7 @@ msgstr ""
 msgid "All %s Archive"
 msgstr ""
 
-#: classes/modules/target-rule/class-astra-target-rules-fields.php:1545
+#: classes/modules/target-rule/class-astra-target-rules-fields.php:1551
 #. translators: %s post title.
 msgid "The same display setting is already exist in %s post/s."
 msgstr ""

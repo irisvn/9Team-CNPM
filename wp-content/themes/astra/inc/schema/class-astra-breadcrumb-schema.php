@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 2.1.3
  */
@@ -40,7 +40,7 @@ class Astra_Breadcrumb_Schema extends Astra_Schema {
 		$breadcrumb_position = astra_get_option( 'breadcrumb-position' );
 		$breadcrumb_source   = astra_get_option( 'select-breadcrumb-source' );
 
-		if ( ( 'astra_entry_top' === $breadcrumb_position && empty( $breadcrumb_source ) ) || ( true !== $this->schema_enabled() ) ) {
+		if ( ( 'astra_entry_top' === $breadcrumb_position && ( 'default' === $breadcrumb_source || empty( $breadcrumb_source ) ) ) || ( true !== $this->schema_enabled() ) ) {
 			add_filter( 'astra_breadcrumb_trail_args', array( $this, 'breadcrumb_schema' ) );
 		}
 	}

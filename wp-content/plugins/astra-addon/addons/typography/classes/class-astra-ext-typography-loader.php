@@ -362,7 +362,8 @@ if ( ! class_exists( 'Astra_Ext_Typography_Loader' ) ) {
 			}
 
 			$localize_array = array(
-				'includeAnchorsInHeadindsCss' => astra_addon_typography_anchors_in_css_selectors_heading(),
+				'includeAnchorsInHeadindsCss'         => astra_addon_typography_anchors_in_css_selectors_heading(),
+				'addon_page_builder_button_style_css' => page_builder_addon_button_style_css(),
 			);
 
 			wp_localize_script( 'astra-ext-typography-customize-preview-js', 'astTypography', $localize_array );

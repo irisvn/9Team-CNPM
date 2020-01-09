@@ -47,6 +47,7 @@ add_action( 'wp_enqueue_scripts', 'owl_carousel', 99 );
 // Class, Function
 
 require_once( get_stylesheet_directory() . '/9team-tool/init.php' );
+require_once( get_stylesheet_directory() . '/TCDM/thucudoimoi.php' );
 
 add_theme_support( 'post-thumbnails' );
 if ( function_exists('add_image_size') ) {
@@ -62,78 +63,84 @@ function my_custom_sizes( $sizes ) {
     ) );
 }
 
-function create_tcdm() {
+/*Sắp xếp lại thứ tự các field*/
+add_filter("woocommerce_checkout_fields", "order_fields");
+function order_fields($fields) {
  
-    $label = array(
-        'name' => 'Thu cũ đổi mới',
-        'singular_name' => 'Sản phẩm cũ'
-    );
-
-    $args = array(
-        'labels' => $label,
-        'description' => 'Post type thu cũ đổi mới điện thoại',
-        'supports' => array(
-            'title',
-            'author',
-            'thumbnail',
-        ),
-        'taxonomies' => array( 'category-tcmd' ),
-        'hierarchical' => false,
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'show_in_admin_bar' => true,
-        'menu_position' => 5,
-        'menu_icon' => '',
-        'can_export' => true,
-        'has_archive' => true,
-        'exclude_from_search' => false,
-        'publicly_queryable' => true,
-        'capability_type' => 'post'
-    );
-
-    register_post_type( 'tcdm' , $args );
-
+  //Shipping
+  $order_shipping = array(
+    "shipping_last_name",
+    "shipping_phone",
+    "shipping_address_1"
+  );
+  foreach($order_shipping as $field_shipping)
+  {
+    $ordered_fields2[$field_shipping] = $fields["shipping"][$field_shipping];
+  }
+  $fields["shipping"] = $ordered_fields2;
+  return $fields;
 }
-
-add_action( 'init', 'create_tcdm' );
-
-function create_taxonomy_tcdm() {
  
-    $labels = array(
-        'name' => 'Brands',
-        'singular' => 'Brand',
-        'menu_name' => 'Brand'
-    );
-
-    $args = array(
-        'labels'                     => $labels,
-        'hierarchical'               => true,
-        'public'                     => true,
-        'show_ui'                    => true,
-        'show_admin_column'          => true,
-        'show_in_nav_menus'          => true,
-        'show_tagcloud'              => false,
-    );
-
-    register_taxonomy('category-tcdm', 'tcdm', $args);
-
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields',99 );
+function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_company']);
+  unset($fields['billing']['billing_first_name']);
+  unset($fields['billing']['billing_postcode']);
+  unset($fields['billing']['billing_country']);
+  unset($fields['billing']['billing_city']);
+  unset($fields['billing']['billing_state']);
+  unset($fields['billing']['billing_address_2']);
+  $fields['billing']['billing_last_name'] = array(
+    'label' => __('Họ và tên', 'devvn'),
+    'placeholder' => _x('Nhập đầy đủ họ và tên của bạn', 'placeholder', 'devvn'),
+    'required' => true,
+    'class' => array('form-row-wide'),
+    'clear' => true
+  );
+  $fields['billing']['billing_address_1']['placeholder'] = 'Ví dụ: Số xx Ngõ xx Phú Kiều, Bắc Từ Liêm, Hà Nội';
+ 
+  unset($fields['shipping']['shipping_company']);
+  unset($fields['shipping']['shipping_postcode']);
+  unset($fields['shipping']['shipping_country']);
+  unset($fields['shipping']['shipping_city']);
+  unset($fields['shipping']['shipping_state']);
+  unset($fields['shipping']['shipping_address_2']);
+ 
+  $fields['shipping']['shipping_phone'] = array(
+    'label' => __('Điện thoại', 'devvn'),
+    'placeholder' => _x('Số điện thoại người nhận hàng', 'placeholder', 'devvn'),
+    'required' => true,
+    'class' => array('form-row-wide'),
+    'clear' => true
+  );
+  $fields['shipping']['shipping_last_name'] = array(
+    'label' => __('Họ và tên', 'devvn'),
+    'placeholder' => _x('Nhập đầy đủ họ và tên của người nhận', 'placeholder', 'devvn'),
+    'required' => true,
+    'class' => array('form-row-wide'),
+    'clear' => true
+  );
+  $fields['shipping']['shipping_address_1']['placeholder'] = 'Ví dụ: Số xx Ngõ xx Phú Kiều, Bắc Từ Liêm, Hà Nội';
+ 
+  return $fields;
 }
-
-// Hook into the 'init' action
-add_action( 'init', 'create_taxonomy_tcdm', 0 );
-
-
+ 
 
 function test_wp() {
  
     $args = array(
         'post_type' => 'tcdm',
+        'meta_query' => array(
+            array(
+                'key' => 'on_off',
+                'value' => '1',
+                'compare' => '=',
+            )
+        )
     );
     $the_query = new WP_Query( $args );
 
-    // echo "<pre>";
+    echo "<pre>";
     // print_r($the_query);
     // echo "</pre>";
     // exit();
@@ -141,14 +148,23 @@ function test_wp() {
 
     if ( $the_query->have_posts() ) :
         while ( $the_query->have_posts() ) : $the_query->the_post();
-            echo "ID: ".get_the_ID()."\n";
             // echo "<pre>";
+            echo "ID: ".get_the_ID()."\n";
+            echo "Name: ".get_the_title()."\n";
+            echo "Img: ".get_the_post_thumbnail_url()."\n";
+            echo "Giá 1: ".get_field( "gia_loai_1" )."\n";
+            echo "Giá 1: ".get_field( "gia_loai_2" )."\n";
+            echo "Giá 1: ".get_field( "gia_loai_3" )."\n";
+            echo "Giá 1: ".get_field( "gia_loai_4" )."\n";
+            echo "Giá 1: ".get_field( "gia_loai_5" )."\n";
             // var_dump(get_the_terms( (int)get_the_ID(), 'category-tcdm' ));
             // exit();
             $_terms = get_the_terms( (int)get_the_ID(), 'category-tcdm' );
             foreach ( $_terms as $_term ) {
-                echo "Term: ". $_term->name."\n";
+                echo "Term: ". $_term->name."</br>";
+                // exit();
             }
+            // exit();
         endwhile;
     endif;
         

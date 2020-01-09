@@ -6,7 +6,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -191,110 +191,8 @@ if ( ! function_exists( 'astra_logo' ) ) {
 			}
 		}
 
-		if ( ! apply_filters( 'astra_disable_site_identity', false ) ) {
+		$html .= astra_get_site_title_tagline( $display_site_title, $display_site_tagline );
 
-			// Site Title.
-			$tag = 'span';
-			if ( is_home() || is_front_page() ) {
-				$tag = 'h1';
-			}
-
-			/**
-			 * Filters the site title output.
-			 *
-			 * @since 1.4.9
-			 *
-			 * @param string the HTML output for Site Title.
-			 */
-			// Site Title.
-			$site_title_markup = apply_filters(
-				'astra_site_title_output',
-				sprintf(
-					'<%1$s %4$s>
-					<a href="%2$s" rel="home" %5$s >
-						%3$s
-					</a>
-				</%1$s>',
-					/**
-					* Filters the tags for site title.
-					*
-					* @since 1.3.1
-					*
-					* @param string $tags string containing the HTML tags for Site Title.
-					*/
-					apply_filters( 'astra_site_title_tag', $tag ),
-					/**
-					* Filters the href for the site title.
-					*
-					* @since 1.4.9
-					*
-					* @param string site title home url
-					*/
-					esc_url( apply_filters( 'astra_site_title_href', home_url( '/' ) ) ),
-					/**
-					* Filters the site title.
-					*
-					* @since 1.4.9
-					*
-					* @param string site title
-					*/
-					apply_filters( 'astra_site_title', get_bloginfo( 'name' ) ),
-					astra_attr(
-						'site-title',
-						array(
-							'class' => 'site-title',
-						)
-					),
-					astra_attr(
-						'site-title-link',
-						array()
-					)
-				)
-			);
-
-			// Site Description.
-			/**
-			 * Filters the site description markup.
-			 *
-			 * @since 1.4.9
-			 *
-			 * @param string the HTML output for Site Title.
-			 */
-			$site_tagline_markup = apply_filters(
-				'astra_site_description_markup',
-				sprintf(
-					'<%1$s class="site-description" itemprop="description">
-					%2$s
-				</%1$s>',
-					/**
-					* Filters the tags for site tagline.
-					*
-					* @since 1.8.5
-					*/
-					apply_filters( 'astra_site_tagline_tag', 'p' ),
-					/**
-					* Filters the site description.
-					*
-					* @since 1.4.9
-					*
-					* @param string site description
-					*/
-					apply_filters( 'astra_site_description', get_bloginfo( 'description' ) )
-				)
-			);
-
-			if ( $display_site_title || $display_site_tagline ) {
-				/* translators: 1: Site Title Markup, 2: Site Tagline Markup */
-				$html .= sprintf(
-					'<div class="ast-site-title-wrap">
-							%1$s
-							%2$s
-						</div>',
-					( $display_site_title ) ? $site_title_markup : '',
-					( $display_site_tagline ) ? $site_tagline_markup : ''
-				);
-			}
-		}
 		$html = apply_filters( 'astra_logo', $html, $display_site_title, $display_site_tagline );
 
 		/**
@@ -306,6 +204,125 @@ if ( ! function_exists( 'astra_logo' ) ) {
 			return $html;
 		}
 	}
+}
+
+/**
+ * Return or echo site logo markup.
+ *
+ * @since 2.2.0
+ * @param boolean $display_site_title Site title enable or not.
+ * @param boolean $display_site_tagline Site tagline enable or not.
+ *
+ * @return string return markup.
+ */
+function astra_get_site_title_tagline( $display_site_title, $display_site_tagline ) {
+	$html = '';
+
+	if ( ! apply_filters( 'astra_disable_site_identity', false ) ) {
+
+		// Site Title.
+		$tag = 'span';
+		if ( is_home() || is_front_page() ) {
+			$tag = 'h1';
+		}
+
+		/**
+		 * Filters the site title output.
+		 *
+		 * @since 1.4.9
+		 *
+		 * @param string the HTML output for Site Title.
+		 */
+		// Site Title.
+		$site_title_markup = apply_filters(
+			'astra_site_title_output',
+			sprintf(
+				'<%1$s %4$s>
+				<a href="%2$s" rel="home" %5$s >
+					%3$s
+				</a>
+			</%1$s>',
+				/**
+				* Filters the tags for site title.
+				*
+				* @since 1.3.1
+				*
+				* @param string $tags string containing the HTML tags for Site Title.
+				*/
+				apply_filters( 'astra_site_title_tag', $tag ),
+				/**
+				* Filters the href for the site title.
+				*
+				* @since 1.4.9
+				*
+				* @param string site title home url
+				*/
+				esc_url( apply_filters( 'astra_site_title_href', home_url( '/' ) ) ),
+				/**
+				* Filters the site title.
+				*
+				* @since 1.4.9
+				*
+				* @param string site title
+				*/
+				apply_filters( 'astra_site_title', get_bloginfo( 'name' ) ),
+				astra_attr(
+					'site-title',
+					array(
+						'class' => 'site-title',
+					)
+				),
+				astra_attr(
+					'site-title-link',
+					array()
+				)
+			)
+		);
+
+		// Site Description.
+		/**
+		 * Filters the site description markup.
+		 *
+		 * @since 1.4.9
+		 *
+		 * @param string the HTML output for Site Title.
+		 */
+		$site_tagline_markup = apply_filters(
+			'astra_site_description_markup',
+			sprintf(
+				'<%1$s class="site-description" itemprop="description">
+				%2$s
+			</%1$s>',
+				/**
+				* Filters the tags for site tagline.
+				*
+				* @since 1.8.5
+				*/
+				apply_filters( 'astra_site_tagline_tag', 'p' ),
+				/**
+				* Filters the site description.
+				*
+				* @since 1.4.9
+				*
+				* @param string site description
+				*/
+				apply_filters( 'astra_site_description', get_bloginfo( 'description' ) )
+			)
+		);
+
+		if ( $display_site_title || $display_site_tagline ) {
+			/* translators: 1: Site Title Markup, 2: Site Tagline Markup */
+			$html .= sprintf(
+				'<div class="ast-site-title-wrap">
+						%1$s
+						%2$s
+					</div>',
+				( $display_site_title ) ? $site_title_markup : '',
+				( $display_site_tagline ) ? $site_tagline_markup : ''
+			);
+		}
+	}
+	return $html;
 }
 
 /**
@@ -540,7 +557,7 @@ if ( ! function_exists( 'astra_get_small_footer_custom_text' ) ) {
 			$theme_author = apply_filters(
 				'astra_theme_author',
 				array(
-					'theme_name'       => __( 'Astra', 'astra' ),
+					'theme_name'       => __( 'Astra WordPress Theme', 'astra' ),
 					'theme_author_url' => 'https://wpastra.com/',
 				)
 			);
@@ -612,7 +629,6 @@ if ( ! function_exists( 'astra_header_markup' ) ) {
 					array(
 						'id'    => 'masthead',
 						'class' => join( ' ', astra_get_header_classes() ),
-						'role'  => 'banner',
 					)
 				);
 			?>
@@ -795,10 +811,12 @@ if ( ! function_exists( 'astra_primary_navigation_markup' ) ) {
 			$items_wrap .= astra_attr(
 				'site-navigation',
 				array(
-					'id' => 'site-navigation',
+					'id'         => 'site-navigation',
+					'class'      => 'ast-flex-grow-1 navigation-accessibility',
+					'aria-label' => esc_attr( 'Site Navigation', 'astra' ),
 				)
 			);
-			$items_wrap .= ' class="ast-flex-grow-1 navigation-accessibility" aria-label="' . esc_attr( 'Site Navigation', 'astra' ) . '">';
+			$items_wrap .= '>';
 			$items_wrap .= '<div class="main-navigation">';
 			$items_wrap .= '<ul id="%1$s" class="%2$s">%3$s</ul>';
 			$items_wrap .= '</div>';
@@ -905,7 +923,6 @@ if ( ! function_exists( 'astra_footer_markup' ) ) {
 					array(
 						'id'    => 'colophon',
 						'class' => join( ' ', astra_get_footer_classes() ),
-						'role'  => 'contentinfo',
 					)
 				);
 			?>
@@ -1484,14 +1501,7 @@ if ( ! function_exists( 'astra_get_post_thumbnail' ) ) {
 					get_the_post_thumbnail(
 						get_the_ID(),
 						apply_filters( 'astra_post_thumbnail_default_size', 'large' ),
-						sprintf(
-							astra_attr(
-								'article-image',
-								array(
-									'class' => '',
-								)
-							)
-						)
+						apply_filters( 'astra_post_thumbnail_itemprop', '' )
 					)
 				);
 
@@ -1598,6 +1608,10 @@ if ( ! function_exists( 'astra_replace_header_attr' ) ) :
 	 * @return array Image attr.
 	 */
 	function astra_replace_header_attr( $attr, $attachment, $size ) {
+
+		if ( ! isset( $attachment ) ) {
+			return $attr;
+		}
 
 		$custom_logo_id     = get_theme_mod( 'custom_logo' );
 		$is_logo_attachment = ( $custom_logo_id == $attachment->ID ) ? true : false;
@@ -1840,6 +1854,25 @@ function astra_filter_socialsnap_upgrade_link( $link ) {
 }
 
 add_filter( 'socialsnap_upgrade_link', 'astra_filter_socialsnap_upgrade_link' );
+
+/**
+ * Update GiveWP's "Add-ons" link.
+ *
+ * This allows affiliates to change the link according to their needs.
+ */
+function astra_givewp_upgrade_link() {
+	$menu_slug = 'edit.php?post_type=give_forms';
+
+	// Remove existing page.
+	remove_submenu_page( $menu_slug, 'give-addons' );
+
+	// Add affiliate link to GiveWP.com.
+	global $submenu;
+
+	$submenu[ $menu_slug ][] = array( 'Add-ons', 'install_plugins', 'https://givewp.com/ref/412' );
+}
+
+add_action( 'admin_menu', 'astra_givewp_upgrade_link', 9999999 );
 
 /**
  * Get instance of WP_Filesystem.

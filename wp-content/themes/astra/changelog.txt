@@ -1,3 +1,25 @@
+v2.1.1
+- Fix: Mobile Menu toggle not working in some cases.
+- Fix: Possible recursion in the update functions.
+
+v2.2.0
+- New: Typography and color settings for Headings and Button.
+- New: Added button and heading compatibility with Page Builders ( https://wpastra.com/docs/new-features-in-astra-2-2/ ).
+- New: Partial refresh for Site Title & Site Tagline in Customizer.
+- Improvement: Theme name updated in credit link text.
+- Fix: Footer text partial refresh.
+- Fix: Theme minimum version notice appearing even when theme is updated.
+- Fix: Hamburger menu conflict with Mediavine Plugin.
+- Fix: Breadcrumb schema before title error.
+- Fix: Breadcrumb text color not working.
+- Fix: Customizer WordPress 5.3 compatibility with width param.
+- Fix: Default icon CSS added for Astra Font family.
+- Fix: FullScreen menu with hash link click not closing the menu.
+- Fix: Brizy elements not editable when transparent header enabled.
+- Fix: Removed role attribute from header and footer tags for proper HTML validation.
+- Fix: Search button accessibility issue.
+- Fix: Schema error for author name in author info.
+
 v2.1.4
 - Improvement: Updated theme description and tags on WordPress.org. 
 - Improvement: Updated minimum required version of PHP on WordPress.org.

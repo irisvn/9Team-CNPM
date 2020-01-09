@@ -1467,8 +1467,9 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Hooks_Meta' ) ) {
 											if ( $key == $options['action'] && isset( $hook['description'] ) ) {
 												$description = $hook['description'];
 											}
+											$hook_description = isset( $hook['description'] ) ? $hook['description'] : '';
 											?>
-										<option <?php selected( $key, $options['action'] ); ?> value="<?php echo $key; ?>" data-desc="<?php echo esc_attr( $hook['description'] ); ?>"><?php echo esc_html( $hook['title'] ); ?></option>
+										<option <?php selected( $key, $options['action'] ); ?> value="<?php echo $key; ?>" data-desc="<?php echo esc_attr( $hook_description ); ?>"><?php echo esc_html( $hook['title'] ); ?></option>
 									<?php endforeach; ?>
 									<?php endif; ?>
 								</optgroup>

@@ -684,7 +684,8 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 		 */
 		function sale_flash( $markup, $post, $product ) {
 
-			$sale_notification = astra_get_option( 'product-sale-notification', '', 'default' );
+			$sale_notification  = astra_get_option( 'product-sale-notification', '', 'default' );
+			$sale_percent_value = '';
 
 			// If none? then return!
 			if ( 'none' === $sale_notification ) {
@@ -692,7 +693,8 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 			}
 
 			// Default text.
-			$text = __( 'Sale!', 'astra-addon' );
+			$text                 = __( 'Sale!', 'astra-addon' );
+			$sale_percentage_data = array();
 
 			switch ( $sale_notification ) {
 
@@ -710,7 +712,8 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 							$text               = str_replace( '[value]', $percent_sale, $sale_percent_value );
 						}
 					} else {
-							// if variable product.
+
+						// if variable product.
 						foreach ( $product->get_children() as $child_id ) {
 							$variation  = wc_get_product( $child_id );
 							$sale_price = $variation->get_sale_price();
@@ -719,6 +722,9 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 								$percent_sale       = round( ( ( ( $regular_price - $sale_price ) / $regular_price ) * 100 ), 0 );
 								$sale_percent_value = $sale_percent_value ? $sale_percent_value : '-[value]%';
 								$text               = str_replace( '[value]', $percent_sale, $sale_percent_value );
+
+								$sale_percentage_data[ $child_id ] = $percent_sale;
+
 							}
 						}
 					}
@@ -732,7 +738,15 @@ if ( ! class_exists( 'ASTRA_Ext_WooCommerce_Markup' ) ) {
 			$classes   = implode( ' ', $classes );
 
 			// Generate markup.
-			return '<span class="' . esc_attr( $classes ) . '">' . esc_html( $text ) . '</span>';
+			return '<span  ' . astra_attr(
+				'woo-sale-badge-container',
+				array(
+					'class'              => $classes,
+					'data-sale'          => json_encode( $sale_percentage_data ),
+					'data-notification'  => $sale_notification,
+					'data-sale-per-text' => $sale_percent_value,
+				)
+			) . '>' . esc_html( $text ) . '</span>';
 
 		}
 

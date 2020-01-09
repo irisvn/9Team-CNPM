@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.4.3
  */
@@ -132,43 +132,59 @@ if ( ! class_exists( 'Astra_Customizer_Button_Configs' ) ) {
 				),
 
 				/**
-				 * Option: Vertical Padding
+				 * Option: Global Button Border Size
 				 */
 				array(
-					'name'        => 'button-v-padding',
-					'default'     => astra_get_option( 'button-v-padding' ),
-					'title'       => __( 'Vertical Padding', 'astra' ),
-					'type'        => 'sub-control',
-					'parent'      => ASTRA_THEME_SETTINGS . '[theme-button-border-group]',
-					'section'     => 'section-buttons',
-					'control'     => 'ast-slider',
-					'input_attrs' => array(
-						'min'  => 1,
-						'step' => 1,
-						'max'  => 200,
+					'type'           => 'sub-control',
+					'parent'         => ASTRA_THEME_SETTINGS . '[theme-button-border-group]',
+					'section'        => 'section-buttons',
+					'control'        => 'ast-border',
+					'name'           => 'theme-button-border-group-border-size',
+					'transport'      => 'postMessage',
+					'linked_choices' => true,
+					'priority'       => 10,
+					'default'        => astra_get_option( 'theme-button-border-group-border-size' ),
+					'title'          => __( 'Width', 'astra' ),
+					'choices'        => array(
+						'top'    => __( 'Top', 'astra' ),
+						'right'  => __( 'Right', 'astra' ),
+						'bottom' => __( 'Bottom', 'astra' ),
+						'left'   => __( 'Left', 'astra' ),
 					),
 				),
 
 				/**
-				 * Option: Horizontal Padding
+				 * Option: Global Button Border Color
 				 */
 				array(
-					'name'        => 'button-h-padding',
-					'default'     => astra_get_option( 'button-h-padding' ),
-					'title'       => __( 'Horizontal Padding', 'astra' ),
-					'type'        => 'sub-control',
-					'parent'      => ASTRA_THEME_SETTINGS . '[theme-button-border-group]',
-					'section'     => 'section-buttons',
-					'control'     => 'ast-slider',
-					'input_attrs' => array(
-						'min'  => 1,
-						'step' => 1,
-						'max'  => 200,
-					),
+					'name'      => 'theme-button-border-group-border-color',
+					'default'   => astra_get_option( 'theme-button-border-group-border-color' ),
+					'transport' => 'postMessage',
+					'type'      => 'sub-control',
+					'parent'    => ASTRA_THEME_SETTINGS . '[theme-button-border-group]',
+					'section'   => 'section-buttons',
+					'control'   => 'ast-color',
+					'priority'  => 12,
+					'title'     => __( 'Color', 'astra' ),
 				),
 
 				/**
-				 * Option: Button Radius
+				 * Option: Global Button Border Hover Color
+				 */
+				array(
+					'name'      => 'theme-button-border-group-border-h-color',
+					'default'   => astra_get_option( 'theme-button-border-group-border-h-color' ),
+					'transport' => 'postMessage',
+					'type'      => 'sub-control',
+					'parent'    => ASTRA_THEME_SETTINGS . '[theme-button-border-group]',
+					'section'   => 'section-buttons',
+					'control'   => 'ast-color',
+					'priority'  => 14,
+					'title'     => __( 'Hover Color', 'astra' ),
+				),
+
+				/**
+				 * Option: Global Button Radius
 				 */
 				array(
 					'name'        => 'button-radius',
@@ -184,6 +200,42 @@ if ( ! class_exists( 'Astra_Customizer_Button_Configs' ) ) {
 						'max'  => 200,
 					),
 				),
+
+				/**
+				 * Option: Button Padding Section
+				 */
+				array(
+					'name'     => ASTRA_THEME_SETTINGS . '[button-padding-styling-divider]',
+					'type'     => 'control',
+					'control'  => 'ast-heading',
+					'section'  => 'section-buttons',
+					'title'    => __( 'Spacing', 'astra' ),
+					'priority' => 30,
+					'settings' => array(),
+				),
+
+				/**
+				 * Option: Theme Button Padding
+				 */
+				array(
+					'name'           => ASTRA_THEME_SETTINGS . '[theme-button-padding]',
+					'default'        => astra_get_option( 'theme-button-padding' ),
+					'type'           => 'control',
+					'control'        => 'ast-responsive-spacing',
+					'section'        => 'section-buttons',
+					'title'          => __( 'Padding', 'astra' ),
+					'linked_choices' => true,
+					'transport'      => 'postMessage',
+					'unit_choices'   => array( 'px', 'em', '%' ),
+					'choices'        => array(
+						'top'    => __( 'Top', 'astra' ),
+						'right'  => __( 'Right', 'astra' ),
+						'bottom' => __( 'Bottom', 'astra' ),
+						'left'   => __( 'Left', 'astra' ),
+					),
+					'priority'       => 35,
+				),
+
 				/**
 				 * Option: Primary Header Button Colors Divider
 				 */

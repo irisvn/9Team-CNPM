@@ -5,11 +5,9 @@
  * @since 2.1.3
  */
 
-window.onload = function(e){ 
-    "use strict";
-    // Woo quantity buttons.
+window.addEventListener( "load", function(e) {
     astrawpWooQuantityButtons();
-};
+});
 
 (function() {
     var send = XMLHttpRequest.prototype.send

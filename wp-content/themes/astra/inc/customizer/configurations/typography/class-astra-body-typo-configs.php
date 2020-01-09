@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.15
  */
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Astra_Body_Typo_Configs' ) ) {
 					'control'   => 'ast-heading',
 					'section'   => 'section-content-typo',
 					'priority'  => 3,
-					'title'     => __( 'Headings', 'astra' ),
+					'title'     => __( 'Headings ( H1 - H6 )', 'astra' ),
 					'settings'  => array(),
 					'separator' => false,
 				),
@@ -258,6 +258,29 @@ if ( ! class_exists( 'Astra_Body_Typo_Configs' ) ) {
 						'uppercase'  => __( 'Uppercase', 'astra' ),
 						'lowercase'  => __( 'Lowercase', 'astra' ),
 					),
+				),
+
+				/**
+				 * Option: Heading <H1> Line Height
+				 */
+				array(
+					'name'              => ASTRA_THEME_SETTINGS . '[headings-line-height]',
+					'section'           => 'section-content-typo',
+					'default'           => astra_get_option( 'headings-line-height' ),
+					'sanitize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_number_n_blank' ),
+					'type'              => 'control',
+					'control'           => 'ast-slider',
+					'title'             => __( 'Line Height', 'astra' ),
+					'transport'         => 'postMessage',
+					'priority'          => 4,
+					'suffix'            => '',
+					'input_attrs'       => array(
+						'min'  => 1,
+						'step' => 0.01,
+						'max'  => 5,
+					),
+					'section'           => 'section-content-typo',
+					'transport'         => 'postMessage',
 				),
 			);
 

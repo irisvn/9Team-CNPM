@@ -370,9 +370,10 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Headers_Markup' ) ) {
 			$full_screen = ( 'full-screen' == $advanced_header_bg_size ) ? ' ast-full-advanced-header' : '';
 			// Add advanced header wrapper classes.
 			printf(
-				'<div class="%1$s" %2$s>',
+				'<div class="%1$s" %2$s role="img" %3$s>',
 				$combined . $parallax . $full_screen . $vertical_center,
-				( ! empty( $parallax ) ) ? 'data-parallax-speed="' . esc_attr( $parallax_speed ) . '"' : ''
+				( ! empty( $parallax ) ) ? 'data-parallax-speed="' . esc_attr( $parallax_speed ) . '"' : '',
+				$this->get_header_background_image_alt_text()
 			);
 		}
 
@@ -410,9 +411,10 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Headers_Markup' ) ) {
 
 				// Add advanced header wrapper classes.
 				printf(
-					'<div class="%1$s" %2$s>',
+					'<div class="%1$s" %2$s role="img" %3$s>',
 					$combined . $parallax . $full_screen . $vertical_center,
-					( ! empty( $parallax ) ) ? 'data-parallax-speed="' . esc_attr( $parallax_speed ) . '"' : ''
+					( ! empty( $parallax ) ) ? 'data-parallax-speed="' . esc_attr( $parallax_speed ) . '"' : '',
+					$this->get_header_background_image_alt_text()
 				);
 			}
 
@@ -600,6 +602,50 @@ if ( ! class_exists( 'Astra_Ext_Advanced_Headers_Markup' ) ) {
 			// Update site Logo for Merge header.
 			add_filter( 'astra_has_custom_logo', '__return_true', 10 );
 			add_filter( 'get_custom_logo', array( $this, 'add_custom_logo' ), 10, 2 );
+		}
+
+		/**
+		 * Get Page Header Image Alt Text
+		 *
+		 * @since 2.2.0
+		 * @return string Alt text if provided for the image else post/archive title.
+		 */
+		function get_header_background_image_alt_text() {
+			$page_post_featured = Astra_Ext_Advanced_Headers_Loader::astra_advanced_headers_design_option( 'page-post-featured' );
+			$bg_image           = Astra_Ext_Advanced_Headers_Loader::astra_advanced_headers_design_option( 'bg-image' );
+
+			// If advanced header disabled.
+			$title_bar_bg_img = '';
+
+			if ( ( is_archive() || is_search() || is_404() || is_home() ) && $bg_image ) {
+				$title_bar_bg_img = $bg_image;
+			} else {
+				// If selected Post / Page Featured image.
+				if ( 'enabled' == $page_post_featured ) {
+
+					if ( has_post_thumbnail( get_the_ID() ) ) {
+							$src              = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail_size' );
+							$title_bar_bg_img = $src[0];
+					} else {
+						// Custom Background Image.
+						if ( $bg_image ) {
+							$title_bar_bg_img = $bg_image;
+						}
+					}
+				} else {
+					// Custom Background Image.
+					if ( $bg_image ) {
+						$title_bar_bg_img = $bg_image;
+					}
+				}
+			}
+
+			$img_alt_text = get_post_meta( attachment_url_to_postid( $title_bar_bg_img ), '_wp_attachment_image_alt', true );
+
+			if ( ! empty( $img_alt_text ) ) {
+				return 'aria-label="' . esc_attr( $img_alt_text ) . '"';
+			}
+			return __return_empty_string();
 		}
 	}
 }

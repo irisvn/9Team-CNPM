@@ -97,7 +97,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h1>
 				 */
-				'.edit-post-visual-editor h1, .wp-block-heading h1.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h1, .wp-block-heading h1.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h1' => array(
 					'font-weight'    => astra_get_css_value( $h1_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h1_font_family, 'font' ),
 					'line-height'    => esc_attr( $h1_line_height ),
@@ -107,7 +107,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h2>
 				 */
-				'.edit-post-visual-editor h2, .wp-block-heading h2.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h2, .wp-block-heading h2.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h2' => array(
 					'font-weight'    => astra_get_css_value( $h2_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h2_font_family, 'font' ),
 					'line-height'    => esc_attr( $h2_line_height ),
@@ -117,7 +117,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h3>
 				 */
-				'.edit-post-visual-editor h3, .wp-block-heading h3.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h3, .wp-block-heading h3.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h3' => array(
 					'font-weight'    => astra_get_css_value( $h3_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h3_font_family, 'font' ),
 					'line-height'    => esc_attr( $h3_line_height ),
@@ -127,7 +127,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h4>
 				 */
-				'.edit-post-visual-editor h4, .wp-block-heading h4.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h4, .wp-block-heading h4.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h4' => array(
 					'font-weight'    => astra_get_css_value( $h4_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h4_font_family, 'font' ),
 					'line-height'    => esc_attr( $h4_line_height ),
@@ -137,7 +137,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h5>
 				 */
-				'.edit-post-visual-editor h5, .wp-block-heading h5.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h5, .wp-block-heading h5.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h5' => array(
 					'font-weight'    => astra_get_css_value( $h5_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h5_font_family, 'font' ),
 					'line-height'    => esc_attr( $h5_line_height ),
@@ -147,7 +147,7 @@ if ( ! class_exists( 'Addon_Gutenberg_Editor_CSS' ) ) {
 				/**
 				 * Heading - <h6>
 				 */
-				'.edit-post-visual-editor h6, .wp-block-heading h6.editor-rich-text__tinymce' => array(
+				'.edit-post-visual-editor h6, .wp-block-heading h6.editor-rich-text__tinymce, .editor-styles-wrapper .wp-block-uagb-advanced-heading h6' => array(
 					'font-weight'    => astra_get_css_value( $h6_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h6_font_family, 'font' ),
 					'line-height'    => esc_attr( $h6_line_height ),

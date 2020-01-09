@@ -4,7 +4,7 @@
  *
  * @package     Astra
  * @author      Astra
- * @copyright   Copyright (c) 2019, Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 2.1.3
  */
@@ -45,7 +45,7 @@ class Astra_CreativeWork_Schema extends Astra_Schema {
 		add_filter( 'astra_attr_article-entry-content-blog-layout-2', array( $this, 'article_content_blog_layout_2_schema_prop' ) );
 		add_filter( 'astra_attr_article-entry-content-blog-layout-3', array( $this, 'article_content_blog_layout_3_schema_prop' ) );
 		add_filter( 'astra_attr_article-entry-content-single-layout', array( $this, 'article_content_single_layout_schema_prop' ) );
-		add_filter( 'astra_attr_article-image', array( $this, 'article_image_schema_prop' ) );
+		add_filter( 'astra_post_thumbnail_itemprop', array( $this, 'article_image_schema_prop' ) );
 		add_filter( 'astra_attr_article-image-blog-archive', array( $this, 'article_image_blog_archive_schema_prop' ) );
 		add_filter( 'astra_attr_article-image-blog-single-post', array( $this, 'article_image_blog_single_post_schema_prop' ) );
 	}
@@ -202,7 +202,7 @@ class Astra_CreativeWork_Schema extends Astra_Schema {
 	 * @return array       Updated embed markup.
 	 */
 	public function article_image_schema_prop( $attr ) {
-		$attr['itemprop'] = 'image';
+		$attr = 'itemprop=image';
 
 		return $attr;
 	}

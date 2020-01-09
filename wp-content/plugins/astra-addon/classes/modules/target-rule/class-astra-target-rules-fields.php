@@ -1342,7 +1342,13 @@ if ( ! class_exists( 'Astra_Target_Rules_Fields' ) ) {
 						$meta_args      .= " OR pm.meta_value LIKE '%\"post-{$current_id}\"%'";
 						break;
 					case 'is_singular':
-						$current_id      = esc_sql( get_the_id() );
+						$current_id = esc_sql( get_the_id() );
+
+						if ( class_exists( 'SitePress' ) ) {
+							$default_language = wpml_get_default_language();
+							$current_id       = icl_object_id( $current_id, $current_post_type, true, $default_language );
+						}
+
 						$current_post_id = $current_id;
 						$meta_args      .= " OR pm.meta_value LIKE '%\"basic-singulars\"%'";
 						$meta_args      .= " OR pm.meta_value LIKE '%\"{$current_post_type}|all\"%'";

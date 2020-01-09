@@ -291,9 +291,7 @@
 .ast-advanced-headers-row .wp-picker-holder{
 	position: absolute;
     z-index: 1;
-}
-.ast-advanced-headers-row .iris-border .iris-picker-inner{
-	right: 0;
+    top:45px;
 }
 
 .ast-advanced-headers-row .wp-color-result span.color-alpha{
